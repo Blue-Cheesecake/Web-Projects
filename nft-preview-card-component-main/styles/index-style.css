@@ -96,6 +96,10 @@ h1 {
     font-weight: 600;
 }
 
+.owner-image {
+    /* nah */
+}
+
 .attribution {
     margin-top: 10vh;
     color: hsl(0, 0%, 100%);
