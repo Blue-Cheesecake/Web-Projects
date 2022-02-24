@@ -15,7 +15,7 @@
         <title>Frontend Mentor | QR code component</title>
 
         <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-        <style>
+        <!-- <style>
             .attribution {
                 font-size: 11px;
                 text-align: center;
@@ -23,11 +23,27 @@
             .attribution a {
                 color: hsl(228, 45%, 44%);
             }
-        </style>
+        </style> -->
+        <link rel="stylesheet" href="/css/index-style.css" />
     </head>
     <body>
-        Improve your front-end skills by building projects Scan the QR code to
-        visit Frontend Mentor and take your coding skills to the next level
+        <div class="outer-container">
+            <img
+                class="img-qrcode"
+                src="/images/image-qr-code.png"
+                alt="qrcode-to-frontend"
+                height="230"
+            />
+
+            <p class="text-paragraph" id="text-description">
+                Improve your front-end skills by building projects
+            </p>
+
+            <p class="text-paragraph" id="text-scanQR">
+                Scan the QR code to visit Frontend Mentor and take your coding
+                skills to the next level
+            </p>
+        </div>
 
         <div class="attribution">
             Challenge by
@@ -35,7 +51,8 @@
                 href="https://www.frontendmentor.io?ref=challenge"
                 target="_blank"
                 >Frontend Mentor</a
-            >. Coded by <a href="#">Your Name Here</a>.
+            >. Coded by
+            <a href="https://github.com/Blue-Cheesecake">Sinut Wattanarporn</a>.
         </div>
     </body>
 </html>
