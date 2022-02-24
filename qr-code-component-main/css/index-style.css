@@ -8,45 +8,35 @@
 
 body {
     background-color: hsl(212, 45%, 89%);
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
 }
 
-.outer-container {
-    /* margin: 10% 25% 0% 25%; */
-    height: 435px;
-    width: 260px;
-    margin: 40px auto;
-    border-radius: 15px;
+main {
     background-color: hsl(0, 0%, 100%);
-    text-align: center;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
 }
 
 .img-qrcode {
-    margin-top: 15px;
     border-radius: 15px;
 }
 
-.attribution {
-    margin-top: 20px;
-    font-size: 11px;
+.text-paragraph {
+    margin-top: 1em;
+    font-size: 1rem;
+    max-width: 230px;
     text-align: center;
 }
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
 
-.text-paragraph {
-    margin: 15px auto auto auto;
-    font-size: 15px;
-    width: 210px;
-    font-family: "Dongle", sans-serif;
-    font-family: "Open Sans", sans-serif;
-}
-
-#text-description {
-    font-weight: 700;
-}
-
-#text-scanQR {
-    font-weight: 400;
+footer {
+    /* margin-top: 100vw; */
 }
