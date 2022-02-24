@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Open+Sans:wght@300;700&display=swap");
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    /*  */
+    background-color: hsl(217, 54%, 11%);
+}
+
+main {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    background-color: hsl(216, 50%, 16%);
+    /* background-color: azure; */
+    border-radius: 15px;
+    padding: 1em;
+    transform: scale(0.9);
+}
+
+p,
+h1,
+span {
+    font-family: "Dongle", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+p {
+    color: hsl(215, 51%, 70%);
+}
+
+hr {
+    height: 1px;
+    background-color: hsl(215, 32%, 27%);
+    border: none;
+    margin: 1em 0;
+}
+
+h1,
+.price-duedate-container {
+    max-width: 270px;
+    margin-top: 1em;
+}
+
+h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+}
+
+้h1,
+.owner-name {
+    color: hsl(0, 0%, 100%);
+}
+
+.description {
+    margin-top: 1em;
+    max-width: 270px;
+}
+
+.price-tag,
+.duedate-tag,
+.owner {
+    margin-left: 0.5em;
+}
+
+.price-duedate-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.equilibrium-img {
+    border-radius: 15px;
+}
+
+.form-inline {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.price-tag {
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+}
+
+.attribution {
+    margin-top: 10vh;
+    color: hsl(0, 0%, 100%);
+}
+
+.attribution a {
+    text-decoration: none;
+    color: hsl(178, 100%, 50%);
+}
