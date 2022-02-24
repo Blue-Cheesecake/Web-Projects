@@ -35,8 +35,16 @@ main {
     font-size: 1rem;
     max-width: 230px;
     text-align: center;
+    font-family: "Dongle", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 footer {
-    /* margin-top: 100vw; */
+    /* margin-top: 10em; */
+    margin-top: 10vh;
+}
+
+footer a {
+    text-decoration: none;
+    color: hsl(218, 44%, 22%);
 }
