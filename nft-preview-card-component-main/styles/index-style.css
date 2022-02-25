@@ -98,6 +98,9 @@ h1 {
 
 .owner-image {
     /* nah */
+    border: solid;
+    border-radius: 50%;
+    border-color: hsl(0, 0%, 100%);
 }
 
 .attribution {
