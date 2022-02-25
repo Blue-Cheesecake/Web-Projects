@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*  */
+    min-height: 80vh;
+    max-height: 80vh;
+    margin: 5em;
+}
+
+.sedans-sect {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: hsl(31, 77%, 52%);
+    padding: 4em;
+}
+
+.suvs-sect {
+    background-color: hsl(184, 100%, 22%);
+    padding: 4em;
+}
+
+.luxury-sect {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: hsl(179, 100%, 13%);
+    padding: 4em;
+}
+
+h1 {
+    font-family: "Big Shoulders Display", cursive;
+    color: hsl(0, 0%, 95%);
+    font-weight: 700;
+    font-size: 3rem;
+    margin-top: 1em;
+}
+
+p {
+    font-family: "Lexend Deca", sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.learn-butt {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    background-color: hsl(0, 0%, 95%);
+    border: 1em solid hsl(0, 0%, 95%);
+    color: hsl(31, 77%, 52%);
+    border-radius: 25%;
+}
