@@ -109,3 +109,33 @@ h1 {
     text-decoration: none;
     color: hsl(178, 100%, 50%);
 }
+
+.image-container {
+    position: relative;
+    display: block;
+}
+
+.overlay-im {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 0.5s ease;
+    opacity: 0;
+    background-color: hsl(178, 100%, 50%, 0.6);
+}
+
+.image-container:hover .overlay-im {
+    opacity: 1;
+}
+
+.overlay-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
