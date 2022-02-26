@@ -57,12 +57,17 @@ body {
 
 /* End Section */
 
-h1 {
+h2 {
     font-family: "Big Shoulders Display", cursive;
     color: var(--backgroundHeadingButtons-very-light-gray);
     font-weight: 700;
     font-size: 3rem;
     margin-top: 1em;
+}
+
+.sedans-head,
+.luxury-head {
+    text-transform: uppercase;
 }
 
 p {
@@ -86,7 +91,7 @@ p {
     border: 0.1em;
     border-style: solid;
     border-color: var(--backgroundHeadingButtons-very-light-gray);
-    border-radius: 28px;
+    border-radius: 3em;
     color: var(--primary-bright-orange);
 }
 
@@ -110,7 +115,7 @@ p {
     border: 0.1em;
     border-style: solid;
     border-color: var(--backgroundHeadingButtons-very-light-gray);
-    border-radius: 28px;
+    border-radius: 3em;
     color: var(--primary-dark-cyan);
 }
 
@@ -134,7 +139,7 @@ p {
     border: 0.1em;
     border-style: solid;
     border-color: var(--backgroundHeadingButtons-very-light-gray);
-    border-radius: 28px;
+    border-radius: 3em;
     color: var(--primary-very-dark-cyan);
 }
 
