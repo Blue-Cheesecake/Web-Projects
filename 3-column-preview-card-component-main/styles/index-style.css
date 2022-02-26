@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
 * {
     margin: 0;
     padding: 0;
@@ -10,29 +11,33 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     /*  */
-    min-height: 80vh;
-    max-height: 80vh;
-    margin: 5em;
+    min-height: 10em;
+    width: 70vw;
+    margin: 4em 0em;
 }
 
+/* Section */
+
 .sedans-sect {
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     background-color: hsl(31, 77%, 52%);
-    padding: 4em;
+    padding: 3.6em;
 }
 
 .suvs-sect {
     background-color: hsl(184, 100%, 22%);
-    padding: 4em;
+    padding: 3.6em;
 }
 
 .luxury-sect {
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: hsl(179, 100%, 13%);
-    padding: 4em;
+    padding: 3.6em;
 }
+
+/* End Section */
 
 h1 {
     font-family: "Big Shoulders Display", cursive;
@@ -48,15 +53,75 @@ p {
     font-weight: 400;
     font-size: 1rem;
     margin-top: 3em;
-    margin-bottom: 3em;
+    margin-bottom: 6em;
+    line-height: 1.8;
 }
 
-.learn-butt {
+/* Learn Button */
+
+.learn-butt-sedans {
     font-family: "Lexend Deca", sans-serif;
     font-weight: 400;
     text-decoration: none;
     background-color: hsl(0, 0%, 95%);
-    border: 1em solid hsl(0, 0%, 95%);
+    padding: 0.9em 2em;
+    border: 0.1em;
+    border-style: solid;
+    border-color: hsl(0, 0%, 95%);
+    border-radius: 28px;
     color: hsl(31, 77%, 52%);
-    border-radius: 25%;
+}
+
+.learn-butt-sedans:hover {
+    background-color: hsl(31, 77%, 52%);
+    color: hsl(0, 0%, 95%);
+}
+
+.learn-butt-suvs {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    background-color: hsl(0, 0%, 95%);
+    padding: 0.9em 2em;
+    border: 0.1em;
+    border-style: solid;
+    border-color: hsl(0, 0%, 95%);
+    border-radius: 28px;
+    color: hsl(184, 100%, 22%);
+}
+
+.learn-butt-suvs:hover {
+    background-color: hsl(184, 100%, 22%);
+    color: hsl(0, 0%, 95%);
+}
+
+.learn-butt-luxury {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    background-color: hsl(0, 0%, 95%);
+    padding: 0.9em 2em;
+    border: 0.1em;
+    border-style: solid;
+    border-color: hsl(0, 0%, 95%);
+    border-radius: 28px;
+    color: hsl(179, 100%, 13%);
+}
+
+.learn-butt-luxury:hover {
+    background-color: hsl(179, 100%, 13%);
+    color: hsl(0, 0%, 95%);
+}
+
+/* End Learn Button */
+
+/* Attribution */
+
+.attribution {
+    font-size: 0.8rem;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(184, 100%, 22%);
+    text-decoration: none;
 }
