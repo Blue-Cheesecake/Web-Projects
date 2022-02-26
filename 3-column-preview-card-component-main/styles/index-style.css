@@ -22,7 +22,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     /*  */
     min-height: 10em;
-    width: 70vw;
+    width: 63.5em;
     margin: 4em 0em;
 }
 
@@ -128,7 +128,7 @@ p {
 /* Attribution */
 
 .attribution {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-align: center;
 }
 .attribution a {
