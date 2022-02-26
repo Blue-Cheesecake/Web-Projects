@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
 
+:root {
+    --primary-bright-orange: hsl(31, 77%, 52%);
+    --primary-dark-cyan: hsl(184, 100%, 22%);
+    --primary-very-dark-cyan: hsl(179, 100%, 13%);
+    --paragraphs-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --backgroundHeadingButtons-very-light-gray: hsl(0, 0%, 95%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +22,7 @@ body {
     width: 100%;
     min-height: 100vh;
     flex-direction: column;
-    background-color: hsla(0, 0%, 100%, 0.75);
+    background-color: var(--backgroundHeadingButtons-very-light-gray);
 }
 
 .main-container {
@@ -31,19 +39,19 @@ body {
 .sedans-sect {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    background-color: hsl(31, 77%, 52%);
+    background-color: var(--primary-bright-orange);
     padding: 3.6em;
 }
 
 .suvs-sect {
-    background-color: hsl(184, 100%, 22%);
+    background-color: var(--primary-dark-cyan);
     padding: 3.6em;
 }
 
 .luxury-sect {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: hsl(179, 100%, 13%);
+    background-color: var(--primary-very-dark-cyan);
     padding: 3.6em;
 }
 
@@ -51,7 +59,7 @@ body {
 
 h1 {
     font-family: "Big Shoulders Display", cursive;
-    color: hsl(0, 0%, 95%);
+    color: var(--backgroundHeadingButtons-very-light-gray);
     font-weight: 700;
     font-size: 3rem;
     margin-top: 1em;
@@ -59,7 +67,7 @@ h1 {
 
 p {
     font-family: "Lexend Deca", sans-serif;
-    color: hsla(0, 0%, 100%, 0.75);
+    color: var(--paragraphs-transparent-white);
     font-weight: 400;
     font-size: 1rem;
     margin-top: 3em;
@@ -73,54 +81,72 @@ p {
     font-family: "Lexend Deca", sans-serif;
     font-weight: 400;
     text-decoration: none;
-    background-color: hsl(0, 0%, 95%);
+    background-color: var(--backgroundHeadingButtons-very-light-gray);
     padding: 0.9em 2em;
     border: 0.1em;
     border-style: solid;
-    border-color: hsl(0, 0%, 95%);
+    border-color: var(--backgroundHeadingButtons-very-light-gray);
     border-radius: 28px;
-    color: hsl(31, 77%, 52%);
+    color: var(--primary-bright-orange);
 }
 
 .learn-butt-sedans:hover {
-    background-color: hsl(31, 77%, 52%);
-    color: hsl(0, 0%, 95%);
+    background-color: var(--primary-bright-orange);
+    color: var(--backgroundHeadingButtons-very-light-gray);
+}
+
+.learn-butt-sedans:focus-visible {
+    background-color: var(--primary-bright-orange);
+    color: var(--backgroundHeadingButtons-very-light-gray);
+    outline: none;
 }
 
 .learn-butt-suvs {
     font-family: "Lexend Deca", sans-serif;
     font-weight: 400;
     text-decoration: none;
-    background-color: hsl(0, 0%, 95%);
+    background-color: var(--backgroundHeadingButtons-very-light-gray);
     padding: 0.9em 2em;
     border: 0.1em;
     border-style: solid;
-    border-color: hsl(0, 0%, 95%);
+    border-color: var(--backgroundHeadingButtons-very-light-gray);
     border-radius: 28px;
-    color: hsl(184, 100%, 22%);
+    color: var(--primary-dark-cyan);
 }
 
 .learn-butt-suvs:hover {
-    background-color: hsl(184, 100%, 22%);
-    color: hsl(0, 0%, 95%);
+    background-color: var(--primary-dark-cyan);
+    color: var(--backgroundHeadingButtons-very-light-gray);
+}
+
+.learn-butt-suvs:focus-visible {
+    background-color: var(--primary-dark-cyan);
+    color: var(--backgroundHeadingButtons-very-light-gray);
+    outline: none;
 }
 
 .learn-butt-luxury {
     font-family: "Lexend Deca", sans-serif;
     font-weight: 400;
     text-decoration: none;
-    background-color: hsl(0, 0%, 95%);
+    background-color: var(--backgroundHeadingButtons-very-light-gray);
     padding: 0.9em 2em;
     border: 0.1em;
     border-style: solid;
-    border-color: hsl(0, 0%, 95%);
+    border-color: var(--backgroundHeadingButtons-very-light-gray);
     border-radius: 28px;
-    color: hsl(179, 100%, 13%);
+    color: var(--primary-very-dark-cyan);
 }
 
 .learn-butt-luxury:hover {
-    background-color: hsl(179, 100%, 13%);
-    color: hsl(0, 0%, 95%);
+    background-color: var(--primary-very-dark-cyan);
+    color: var(--backgroundHeadingButtons-very-light-gray);
+}
+
+.learn-butt-luxury:focus-visible {
+    background-color: var(--primary-very-dark-cyan);
+    color: var(--backgroundHeadingButtons-very-light-gray);
+    outline: none;
 }
 
 /* End Learn Button */
@@ -132,6 +158,6 @@ p {
     text-align: center;
 }
 .attribution a {
-    color: hsl(184, 100%, 22%);
+    color: var(--primary-dark-cyan);
     text-decoration: none;
 }

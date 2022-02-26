@@ -2,6 +2,11 @@
 
 based on frontend mentor review
 
+**Me**
+
+-   **Styling**
+    -   [ ] Add global variables for color.
+
 **Vanza Setia**
 
 -   **Accessibility**
