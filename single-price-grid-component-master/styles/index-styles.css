@@ -20,17 +20,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    min-width: 100%;
     min-height: 100vh;
     flex-direction: column;
     background-color: var(--bg-light-gray);
 }
 
 .main-container {
-    margin: 0 25em;
+    max-width: 40em;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas:
         "article article"
         "subscript reasons";
@@ -55,13 +55,25 @@ body {
 .article-div,
 .subscript-div,
 .reason-div {
-    padding: 2em;
+    padding: 2.5em;
 }
 
 .price-div {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+.para-main-30day,
+.price-div,
+.list-why,
+.signup-butt {
+    margin-top: 1.5em;
+}
+
+.para-main-gainaccess,
+.para-sub {
+    margin-top: 0.6em;
 }
 
 /* ! Text */
@@ -76,6 +88,7 @@ body {
 
 .para-main-gainaccess {
     color: var(--paragraphs-grayish-blue);
+    line-height: 1.7em;
 }
 
 .subscript-div,
@@ -94,17 +107,24 @@ body {
     font-weight: 700;
 }
 
-.para-main-30day,
-.para-main-gainaccess,
-.para-sub {
-    font-size: 1rem;
-    font-weight: 400;
-}
-
 .price-sub {
     font-size: 2rem;
     font-weight: 700;
     margin-right: 0.5em;
+}
+
+.para-main-30day,
+.para-main-gainaccess,
+.para-sub,
+.paraPrice-sub,
+.list-why {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.list-why {
+    list-style: none;
+    line-height: 1.5em;
 }
 
 /* End Text */
@@ -112,6 +132,7 @@ body {
 /* ! Button Link */
 
 .signup-butt {
+    display: block;
     text-decoration: none;
     background-color: var(--primary-bright-yellow);
 }
