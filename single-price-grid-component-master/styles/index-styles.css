@@ -70,10 +70,13 @@ body {
 }
 
 .para-main-30day,
+.list-why {
+    margin-top: 1em;
+}
+
 .price-div,
-.list-why,
 .signup-butt {
-    margin-top: 1.5em;
+    margin-top: 2em;
 }
 
 .para-main-gainaccess,
@@ -147,12 +150,3 @@ body {
 }
 
 /*  End Butt */
-
-.attribution {
-    margin-top: 15em;
-    font-size: 0.8rem;
-    text-align: center;
-}
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
