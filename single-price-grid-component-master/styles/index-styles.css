@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@100;300;400;700&display=swap");
 
 * {
     margin: 0;
@@ -14,6 +14,7 @@
     --bg-light-gray: hsl(204, 43%, 93%);
     --paragraphs-grayish-blue: hsl(218, 22%, 67%);
     --font-family: "Karla", sans-serif;
+    --border-radious-em: 0.5em;
 }
 
 body {
@@ -40,16 +41,20 @@ body {
 .article-div {
     grid-area: article;
     background-color: var(--primary-white);
+    border-top-left-radius: var(--border-radious-em);
+    border-top-right-radius: var(--border-radious-em);
 }
 
 .subscript-div {
     grid-area: subscript;
     background-color: var(--primary-cyan);
+    border-bottom-left-radius: var(--border-radious-em);
 }
 
 .reason-div {
     grid-area: reasons;
     background-color: var(--primary-light-cyan);
+    border-bottom-right-radius: var(--border-radious-em);
 }
 
 .article-div,
@@ -119,7 +124,7 @@ body {
 .paraPrice-sub,
 .list-why {
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .list-why {
@@ -134,13 +139,17 @@ body {
 .signup-butt {
     display: block;
     text-decoration: none;
+    text-align: center;
+    padding: 1em 0em;
     background-color: var(--primary-bright-yellow);
+    border-radius: var(--border-radious-em);
+    box-shadow: 0em 0em 0.8em var(--paragraphs-grayish-blue);
 }
 
 /*  End Butt */
 
 .attribution {
-    margin-top: 10em;
+    margin-top: 15em;
     font-size: 0.8rem;
     text-align: center;
 }
