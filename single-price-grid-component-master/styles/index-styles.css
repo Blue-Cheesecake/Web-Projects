@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +8,12 @@
 
 :root {
     --primary-cyan: hsl(179, 62%, 43%);
-    --primary-light-cyan: hsl(179, 90%, 43%);
+    --primary-light-cyan: hsl(179, 47%, 52%);
     --primary-bright-yellow: hsl(71, 73%, 54%);
+    --primary-white: hsl(0, 0%, 100%);
     --bg-light-gray: hsl(204, 43%, 93%);
     --paragraphs-grayish-blue: hsl(218, 22%, 67%);
+    --font-family: "Karla", sans-serif;
 }
 
 body {
@@ -19,22 +23,23 @@ body {
     width: 100%;
     min-height: 100vh;
     flex-direction: column;
-    background-color: var(--paragraphs-grayish-blue);
+    background-color: var(--bg-light-gray);
 }
 
 .main-container {
-    margin: 0 10em;
+    margin: 0 25em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
         "article article"
         "subscript reasons";
+    font-family: var(--font-family);
 }
 
 .article-div {
     grid-area: article;
-    background-color: var(--bg-light-gray);
+    background-color: var(--primary-white);
 }
 
 .subscript-div {
@@ -52,6 +57,66 @@ body {
 .reason-div {
     padding: 2em;
 }
+
+.price-div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* ! Text */
+
+.head-main {
+    color: var(--primary-cyan);
+}
+
+.para-main-30day {
+    color: var(--primary-bright-yellow);
+}
+
+.para-main-gainaccess {
+    color: var(--paragraphs-grayish-blue);
+}
+
+.subscript-div,
+.reason-div,
+.signup-butt {
+    color: var(--primary-white);
+}
+
+.head-main {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.head-sub {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.para-main-30day,
+.para-main-gainaccess,
+.para-sub {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.price-sub {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 0.5em;
+}
+
+/* End Text */
+
+/* ! Button Link */
+
+.signup-butt {
+    text-decoration: none;
+    background-color: var(--primary-bright-yellow);
+}
+
+/*  End Butt */
 
 .attribution {
     margin-top: 10em;
