@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+:root {
+    /* Color Variable */
+    --main-bg-color: hsl(233, 47%, 7%);
+    --card-bg-color: hsl(244, 38%, 16%);
+    --accent-color: hsl(277, 64%, 61%);
+    --main-heading-stats-color: hsl(0, 0%, 100%);
+    --main-para-color: hsla(0, 0%, 100%, 0.75);
+    --stat-headings-color: hsla(0, 0%, 100%, 0.6);
+    --main-head-para-font: "Inter", sans-serif;
+    --stat-para-font: "Lexend Deca", sans-serif;
+    --border-radius-em: 0.5em;
+}
+/* r */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--main-bg-color);
+}
+
+/* 1 */
+
+main.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "description image";
+    margin: auto 11em;
+}
+
+/* 2 */
+
+.left-div {
+    grid-area: description;
+    background-color: var(--card-bg-color);
+    border-top-left-radius: var(--border-radius-em);
+    border-bottom-left-radius: var(--border-radius-em);
+    padding: 2em;
+}
+
+.right-div {
+    grid-area: image;
+}
+
+/* 3 */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+/* 4 */
+
+.right-image {
+    object-fit: cover;
+    border-top-right-radius: var(--border-radius-em);
+    border-bottom-right-radius: var(--border-radius-em);
+}
+
+/* Text Decoration */
+.main-heading,
+.main-para,
+.stats > div > h2 {
+    font-family: var(--main-head-para-font);
+}
+
+.stats > div > p {
+    text-transform: uppercase;
+    font-family: var(--stat-para-font);
+    color: var(--stat-headings-color);
+}
+
+.main-heading,
+.stats > div > h2 {
+    color: var(--main-heading-stats-color);
+}
+
+.main-para {
+    color: var(--main-para-color);
+}
+
+.insights-text {
+    color: var(--accent-color);
+}
