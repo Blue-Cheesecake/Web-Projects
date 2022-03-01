@@ -11,6 +11,7 @@
     --main-head-para-font: "Inter", sans-serif;
     --stat-para-font: "Lexend Deca", sans-serif;
     --border-radius-em: 0.5em;
+    --max-widthHeight: 40em;
 }
 /* r */
 body {
@@ -28,6 +29,8 @@ main.container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "description image";
+    /* min-height: 10em; */
+    max-width: 70em;
     margin: auto 11em;
 }
 
@@ -38,11 +41,17 @@ main.container {
     background-color: var(--card-bg-color);
     border-top-left-radius: var(--border-radius-em);
     border-bottom-left-radius: var(--border-radius-em);
-    padding: 2em;
+    max-width: var(--max-widthHeight);
+    padding: 4em 6em 4em 4em;
 }
 
 .right-div {
+    background: url("/images/image-header-desktop.jpg") no-repeat;
+    background-size: cover;
+    max-width: var(--max-widthHeight);
     grid-area: image;
+    border-top-right-radius: var(--border-radius-em);
+    border-bottom-right-radius: var(--border-radius-em);
 }
 
 /* 3 */
@@ -54,10 +63,13 @@ main.container {
 
 /* 4 */
 
-.right-image {
-    object-fit: cover;
+.purple-bg {
+    background-color: var(--accent-color);
     border-top-right-radius: var(--border-radius-em);
     border-bottom-right-radius: var(--border-radius-em);
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
 }
 
 /* Text Decoration */
@@ -68,9 +80,12 @@ main.container {
 }
 
 .stats > div > p {
+    font-size: 0.8rem;
+    font-weight: 400;
     text-transform: uppercase;
     font-family: var(--stat-para-font);
     color: var(--stat-headings-color);
+    margin-top: 0.5em;
 }
 
 .main-heading,
@@ -78,8 +93,18 @@ main.container {
     color: var(--main-heading-stats-color);
 }
 
+.main-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
 .main-para {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5em;
     color: var(--main-para-color);
+    margin-bottom: 4em;
 }
 
 .insights-text {
