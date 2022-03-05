@@ -42,6 +42,20 @@
   font-family: "Red Hat Display", sans-serif;
 }
 
+/* Font Size */
+
+.font-head {
+  font-size: 1.75rem;
+}
+
+.font-sub-head {
+  font-size: 1.25rem;
+}
+
+.font-paragraph {
+  font-size: 1rem;
+}
+
 /* Weight */
 
 .font-weigth-header {
@@ -76,15 +90,24 @@
   flex-direction: column;
 }
 
-.fit-block {
-  width: fit-content;
-  block-size: fit-content;
+.center-text {
+  text-align: center;
+}
+
+.scale-down {
+  transform: scale(0.9);
 }
 
 /* Border */
 
-.round-border {
-  border-radius: 1em;
+.round-border-tl-tr {
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
+.round-border-bl-br {
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
 }
 
 /* Decoration A */
@@ -95,12 +118,20 @@
 
 /* custom width */
 .fx-width {
-  max-width: 30em;
+  max-width: 25em;
 }
 
 /* Margin */
 
+.mg-bottom {
+  margin-bottom: 2em;
+}
+
 /* Padding */
+
+.small-pd {
+  padding: 1em;
+}
 
 .pd {
   padding: 3em;
