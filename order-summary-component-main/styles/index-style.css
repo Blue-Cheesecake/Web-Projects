@@ -24,6 +24,10 @@
   background-color: white;
 }
 
+.butt-text-color {
+  color: hsl(245, 75%, 52%);
+}
+
 .card-text-color {
   color: hsl(225, 100%, 98%);
 }
@@ -86,6 +90,12 @@
   align-items: center;
 }
 
+.go-left-right-space-mid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .flex-column {
   flex-direction: column;
 }
@@ -95,7 +105,7 @@
 }
 
 .scale-down {
-  transform: scale(0.9);
+  transform: scale(0.9, 0.9);
 }
 
 /* Border */
@@ -118,7 +128,7 @@
 
 /* custom width */
 .fx-width {
-  max-width: 25em;
+  max-width: 28em;
 }
 
 /* Margin */
@@ -127,10 +137,18 @@
   margin-bottom: 2em;
 }
 
+.small-mg-r {
+  margin-right: 1em;
+}
+
 /* Padding */
 
 .small-pd {
   padding: 1em;
+}
+
+.mid-pd {
+  padding: 2em;
 }
 
 .pd {
