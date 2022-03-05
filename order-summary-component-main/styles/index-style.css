@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Color */
+
+.card-bg-color {
+  background-color: hsl(225, 100%, 98%);
+}
+
+.main-bg-color {
+  background-color: hsl(225, 100%, 94%);
+}
+
+.butt-bg-color {
+  background-color: hsl(245, 75%, 52%);
+}
+
+.white-bg-color {
+  background-color: white;
+}
+
+.card-text-color {
+  color: hsl(225, 100%, 98%);
+}
+
+.header-text-color {
+  color: hsl(223, 47%, 23%);
+}
+
+.paragraph-text-color {
+  color: hsl(224, 23%, 55%);
+}
+
+/* Font */
+
+.red-hat-font {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+/* Weight */
+
+.font-weigth-header {
+  font-weight: 900;
+}
+
+.font-weight-sub-header {
+  font-weight: 700;
+}
+
+.font-weight-paragraph {
+  font-weight: 500;
+}
+
+/* Arrange Item */
+
+.center-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.center-item-no-wh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.fit-block {
+  width: fit-content;
+  block-size: fit-content;
+}
+
+/* Border */
+
+.round-border {
+  border-radius: 1em;
+}
+
+/* Decoration A */
+
+.remove-decoration {
+  text-decoration: none;
+}
+
+/* custom width */
+.fx-width {
+  max-width: 30em;
+}
+
+/* Margin */
+
+/* Padding */
+
+.pd {
+  padding: 3em;
+}
