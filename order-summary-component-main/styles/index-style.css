@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-/* Color */
+/* Background Color */
 
 .card-bg-color {
   background-color: hsl(225, 100%, 98%);
@@ -24,6 +24,8 @@
   background-color: white;
 }
 
+/* Text Color [Static] */
+
 .butt-text-color {
   color: hsl(245, 75%, 52%);
 }
@@ -38,6 +40,21 @@
 
 .paragraph-text-color {
   color: hsl(224, 23%, 55%);
+}
+
+/* Text Color [Hover] */
+
+.dark-blue-hover:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+/* Background Color [Hover] */
+.butt-hover-bg:hover {
+  background-color: hsl(245, 83%, 68%);
+}
+
+.butt-hover-text:hover {
+  color: hsl(245, 83%, 68%);
 }
 
 /* Font */
@@ -108,6 +125,13 @@
   transform: scale(0.9, 0.9);
 }
 
+/* Responsive Image */
+
+.res-img {
+  width: 100%;
+  height: auto;
+}
+
 /* Border */
 
 .round-border-tl-tr {
@@ -126,7 +150,23 @@
   text-decoration: none;
 }
 
+.remove-decoration-hov:hover {
+  text-decoration: none;
+}
+
+/* Display */
+.block {
+  display: block;
+}
+
+/* Box Shadow */
+
+.shadow-bottom {
+  box-shadow: 0 1.5em 1.5em 0em hsl(225, 100%, 94%);
+}
+
 /* custom width */
+
 .fx-width {
   max-width: 28em;
 }
