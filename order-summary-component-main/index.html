@@ -16,84 +16,86 @@
 
     <title>Frontend Mentor | Order summary card</title>
   </head>
-  <body class="center-item main-bg-color">
-    <main
-      class="container center-item-no-wh flex-column white-bg-color fx-width round-border-bl-br round-border-tl-tr scale-down"
-    >
-      <figure>
-        <img
-          src="/images/illustration-hero.svg"
-          alt=""
-          class="res-img round-border-tl-tr"
-        />
-      </figure>
+  <body>
+    <div class="main-background center-item">
+      <main
+        class="container center-item-no-wh flex-column white-bg-color fx-width round-border-bl-br round-border-tl-tr scale-down"
+      >
+        <figure>
+          <img
+            src="/images/illustration-hero.svg"
+            alt=""
+            class="res-img round-border-tl-tr"
+          />
+        </figure>
 
-      <div class="pd">
-        <div class="mg-bottom center-text">
-          <h1
-            class="head red-hat-font font-weight-header header-text-color font-head"
+        <div class="pd">
+          <div class="mg-bottom center-text">
+            <h1
+              class="head red-hat-font font-weight-header header-text-color font-head"
+            >
+              Order Summary
+            </h1>
+          </div>
+
+          <div class="mg-bottom center-text">
+            <p
+              class="description red-hat-font font-weight-paragraph paragraph-text-color font-paragraph"
+            >
+              You can now listen to millions of songs, audiobooks, and podcasts
+              on any device anywhere you like!
+            </p>
+          </div>
+
+          <div
+            class="subscription card-bg-color round-border-bl-br round-border-tl-tr mg-bottom mid-pd go-left-right-space-mid"
           >
-            Order Summary
-          </h1>
-        </div>
+            <div class="center-item-no-wh">
+              <img src="/images/icon-music.svg" alt="" class="small-mg-r" />
 
-        <div class="mg-bottom center-text">
-          <p
-            class="description red-hat-font font-weight-paragraph paragraph-text-color font-paragraph"
-          >
-            You can now listen to millions of songs, audiobooks, and podcasts on
-            any device anywhere you like!
-          </p>
-        </div>
+              <div class="subscript-text">
+                <h2
+                  class="font-weight-sub-header red-hat-font header-text-color font-sub-head"
+                >
+                  Annual Plan
+                </h2>
+                <p
+                  class="font-weight-paragraph red-hat-font paragraph-text-color font-paragraph"
+                >
+                  $59.99/year
+                </p>
+              </div>
+            </div>
 
-        <div
-          class="subscription card-bg-color round-border-bl-br round-border-tl-tr mg-bottom mid-pd go-left-right-space-mid"
-        >
-          <div class="center-item-no-wh">
-            <img src="/images/icon-music.svg" alt="" class="small-mg-r" />
-
-            <div class="subscript-text">
-              <h2
-                class="font-weight-sub-header red-hat-font header-text-color font-sub-head"
+            <div>
+              <a
+                href="#"
+                class="font-weight-sub-header red-hat-font butt-text-color font-paragraph remove-decoration-hov butt-hover-text"
+                >Change</a
               >
-                Annual Plan
-              </h2>
-              <p
-                class="font-weight-paragraph red-hat-font paragraph-text-color font-paragraph"
-              >
-                $59.99/year
-              </p>
             </div>
           </div>
 
-          <div>
+          <a
+            href="#"
+            class="mg-bottom center-text butt-bg-color round-border-bl-br round-border-tl-tr small-pd shadow-bottom block remove-decoration-hov butt-hover-bg"
+          >
+            <p
+              class="proceed-butt remove-decoration card-text-color red-hat-font font-weight-sub-header font-paragraph"
+            >
+              Proceed to Payment
+            </p>
+          </a>
+
+          <div class="center-text">
             <a
               href="#"
-              class="font-weight-sub-header red-hat-font butt-text-color font-paragraph remove-decoration-hov butt-hover-text"
-              >Change</a
+              class="cancel-butt remove-decoration paragraph-text-color red-hat-font font-weight-sub-header font-paragraph dark-blue-hover"
+              >Cancel Order</a
             >
           </div>
         </div>
-
-        <a
-          href="#"
-          class="mg-bottom center-text butt-bg-color round-border-bl-br round-border-tl-tr small-pd shadow-bottom block remove-decoration-hov butt-hover-bg"
-        >
-          <p
-            class="proceed-butt remove-decoration card-text-color red-hat-font font-weight-sub-header font-paragraph"
-          >
-            Proceed to Payment
-          </p>
-        </a>
-
-        <div class="center-text">
-          <a
-            href="#"
-            class="cancel-butt remove-decoration paragraph-text-color red-hat-font font-weight-sub-header font-paragraph dark-blue-hover"
-            >Cancel Order</a
-          >
-        </div>
-      </div>
-    </main>
+      </main>
+    </div>
   </body>
 </html>

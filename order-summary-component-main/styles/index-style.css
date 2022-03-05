@@ -57,6 +57,13 @@
   color: hsl(245, 83%, 68%);
 }
 
+.main-background {
+  background: url("/images/pattern-background-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 70vh;
+}
+
 /* Font */
 
 .red-hat-font {
