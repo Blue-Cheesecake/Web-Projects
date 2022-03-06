@@ -11,3 +11,7 @@
 
 /* Tailwind */
 @import "./vendors/tailwind-out.min.css";
+
+.bg-accent-blue {
+  background-color: var(--accent-blue);
+}

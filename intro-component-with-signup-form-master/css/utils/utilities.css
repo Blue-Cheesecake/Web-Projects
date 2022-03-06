@@ -2,8 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  min-height: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 .round-border {

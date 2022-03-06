@@ -1,9 +1,17 @@
 @import "/css/utils/variables.css";
 
-.black-border {
-  border-color: black;
+.input-box {
+  display: block;
+  border-radius: 0.5rem;
+  border-width: 0.05em;
+  border-color: gray;
+  margin-bottom: 1em;
+  padding: 1em;
+  width: 100%;
 }
 
-.red-border {
-  border-color: var(--primary-red);
+.input-box:focus,
+.input-box:focus-visible {
+  outline-width: thin;
+  outline-color: var(--neutral-dark-blue);
 }
