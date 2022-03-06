@@ -1,0 +1,9 @@
+@import "/css/utils/variables.css";
+
+.black-border {
+  border-color: black;
+}
+
+.red-border {
+  border-color: var(--primary-red);
+}

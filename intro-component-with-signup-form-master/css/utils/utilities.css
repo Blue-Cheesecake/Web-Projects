@@ -1,0 +1,11 @@
+.center-item-full {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+}
+
+.round-border {
+  border-radius: 0.5em;
+}
