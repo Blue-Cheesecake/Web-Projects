@@ -4,6 +4,7 @@
 /* Components */
 @import "./components/button.css";
 @import "./components/input.css";
+@import "./components/warning.css";
 
 /* Utilities */
 @import "./utils/utilities.css";
@@ -14,4 +15,16 @@
 
 .bg-accent-blue {
   background-color: var(--accent-blue);
+}
+
+.font-primary-red {
+  color: var(--primary-red);
+}
+
+.bg {
+  background-image: var(--bg-intro-desktop-path);
+  background-color: var(--primary-red);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }

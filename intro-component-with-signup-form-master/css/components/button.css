@@ -1,0 +1,13 @@
+@import "/css/utils/variables.css";
+
+.green-butt {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-green);
+  outline-width: 0.5rem;
+  outline: var(--primary-dark-green);
+}

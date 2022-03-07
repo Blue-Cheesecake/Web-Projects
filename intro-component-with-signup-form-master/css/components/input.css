@@ -1,11 +1,8 @@
-@import "/css/utils/variables.css";
-
 .input-box {
   display: block;
   border-radius: 0.5rem;
   border-width: 0.05em;
   border-color: gray;
-  margin-bottom: 1em;
   padding: 1em;
   width: 100%;
 }
