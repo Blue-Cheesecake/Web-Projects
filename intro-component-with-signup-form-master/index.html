@@ -40,7 +40,7 @@
         <section class="min-x-lg">
           <!-- Title -->
           <div
-            class="bg-accent-blue rounded-lg p-5 mb-6 flex justify-center items-center"
+            class="bg-accent-blue rounded-lg p-5 mb-6 flex justify-center items-center transparent-gray-box-shadow"
           >
             <h2 class="text-white text-xl">
               <span class="font-bold">Try it free 7 days</span>
@@ -49,15 +49,18 @@
           </div>
 
           <!-- Form -->
-          <div class="rounded-lg p-12 bg-white">
+          <div class="rounded-lg p-12 bg-white transparent-gray-box-shadow">
             <form action="" method="get">
               <!-- ! First name -->
               <input
-                class="input-box mb-1-25em text-xl p-5 pl-10"
+                class="input-box mb-1-25em text-xl p-5 pl-10 font-medium"
                 type="text"
                 name="firstname"
                 id="firstname"
                 placeholder="First Name"
+                required
+                oninvalid="this.setCustomValidity('')"
+                oninput="this.setCustomValidity('')"
               />
 
               <!-- First Warn -->
@@ -69,11 +72,12 @@
 
               <!-- ! Last name -->
               <input
-                class="input-box mb-1-25em text-xl p-5 pl-10"
+                class="input-box mb-1-25em text-xl p-5 pl-10 font-medium"
                 type="text"
                 name="lastname"
                 id="lastname"
                 placeholder="Last Name"
+                required
               />
 
               <!-- Last Warn -->
@@ -85,11 +89,12 @@
 
               <!-- ! Email Address -->
               <input
-                class="input-box mb-1-25em text-xl p-5 pl-10"
+                class="input-box mb-1-25em text-xl p-5 pl-10 font-medium"
                 type="email"
                 name="email"
                 id="email"
                 placeholder="Email Address"
+                required
               />
 
               <!-- Email Warn -->
@@ -101,11 +106,12 @@
 
               <!-- ! Password -->
               <input
-                class="input-box mb-1-25em text-xl p-5 pl-10"
+                class="input-box mb-1-25em text-xl p-5 pl-10 font-medium"
                 type="password"
                 name="password"
                 id="password"
                 placeholder="Password"
+                required
               />
 
               <!-- Password Warn -->
@@ -116,7 +122,6 @@
               </div>
 
               <!-- ! Submit butt -->
-
               <button class="green-butt mb-4">
                 <span class="uppercase text-white font-semibold text-lg"
                   >Claim your free trial</span

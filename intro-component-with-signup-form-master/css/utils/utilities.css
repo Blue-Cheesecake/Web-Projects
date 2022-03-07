@@ -21,3 +21,12 @@
 .min-x-lg {
   min-width: 42rem;
 }
+
+.transparent-gray-box-shadow {
+  box-shadow: 0 0.5em hsl(0, 0%, 0%, 0.17);
+}
+
+.primary-red-border {
+  border-width: 0.125em;
+  border-color: var(--primary-red);
+}

@@ -17,3 +17,11 @@
   font-family: var(--font-primary);
   font-size: 400;
 }
+
+.warn-icon-bg {
+  background: url("/images/icon-error.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-origin: content-box;
+}
