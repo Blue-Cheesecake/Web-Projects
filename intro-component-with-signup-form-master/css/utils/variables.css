@@ -3,7 +3,8 @@
 :root {
   --primary-red: hsl(0, 100%, 74%);
   --primary-green: hsl(154, 59%, 51%);
-  --primary-dark-green: hsla(154, 59%, 51%, 0.781);
+  --hover-faded-green: hsl(154, 65%, 68%);
+  --primary-dark-green: hsl(155, 46%, 47%);
   --accent-blue: hsl(248, 32%, 49%);
   --neutral-dark-blue: hsl(249, 10%, 26%);
   --neutral-grayish-blue: hsl(246, 25%, 77%);

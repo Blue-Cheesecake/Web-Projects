@@ -17,3 +17,7 @@
 .mb-05em {
   margin-bottom: 0.5em;
 }
+
+.min-x-lg {
+  min-width: 42rem;
+}

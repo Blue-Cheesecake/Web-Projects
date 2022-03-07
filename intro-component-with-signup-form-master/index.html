@@ -21,14 +21,14 @@
       <main class="center-item-full mx-10">
         <!-- Article -->
         <article
-          class="flex justify-center items-center flex-col p-14 max-w-xl"
+          class="flex justify-center items-center flex-col p-14 max-w-2xl mr-8"
         >
           <div>
-            <h1 class="font-bold text-5xl mb-8 text-white">
+            <h1 class="font-bold text-7xl mb-8 text-white">
               Learn to code by <br />
               watching others
             </h1>
-            <p class="font-normal text-base text-white">
+            <p class="font-normal text-xl text-white">
               See how experienced developers solve problems in real-time. <br />
               Watching scripted tutorials is great, but understanding how
               developers think is invaluable.
@@ -37,95 +37,100 @@
         </article>
 
         <!-- Form section -->
-        <section>
+        <section class="min-x-lg">
           <!-- Title -->
           <div
-            class="bg-accent-blue rounded-lg p-4 mb-6 flex justify-center items-center"
+            class="bg-accent-blue rounded-lg p-5 mb-6 flex justify-center items-center"
           >
-            <h2 class="text-white text-base">
+            <h2 class="text-white text-xl">
               <span class="font-bold">Try it free 7 days</span>
               then $20/mo. thereafter
             </h2>
           </div>
 
           <!-- Form -->
-          <div class="rounded-lg p-8 bg-white">
-            <form action="" method="post">
-              <!-- First name -->
+          <div class="rounded-lg p-12 bg-white">
+            <form action="" method="get">
+              <!-- ! First name -->
               <input
-                class="input-box mb-1-25em"
+                class="input-box mb-1-25em text-xl p-5 pl-10"
                 type="text"
                 name="firstname"
                 id="firstname"
                 placeholder="First Name"
               />
 
+              <!-- First Warn -->
               <div class="align-warning-text hidden" id="fn_div">
-                <span class="font-primary-red text-sm italic"
+                <span class="font-primary-red text-base italic"
                   >First Name cannot be empty</span
                 >
               </div>
 
-              <!-- Last name -->
+              <!-- ! Last name -->
               <input
-                class="input-box mb-1em"
+                class="input-box mb-1-25em text-xl p-5 pl-10"
                 type="text"
                 name="lastname"
                 id="lastname"
                 placeholder="Last Name"
               />
 
-              <div class="align-warning-text" id="ln_div">
-                <span class="font-primary-red text-sm italic"
+              <!-- Last Warn -->
+              <div class="align-warning-text hidden" id="ln_div">
+                <span class="font-primary-red text-base italic"
                   >Last Name cannot be empty</span
                 >
               </div>
 
-              <!-- Email Address -->
+              <!-- ! Email Address -->
               <input
-                class="input-box mb-05em"
+                class="input-box mb-1-25em text-xl p-5 pl-10"
                 type="email"
                 name="email"
                 id="email"
                 placeholder="Email Address"
               />
 
-              <div class="align-warning-text" id="em_div">
-                <span class="font-primary-red text-sm italic mb-1-25em"
+              <!-- Email Warn -->
+              <div class="align-warning-text hidden" id="em_div">
+                <span class="font-primary-red text-base italic mb-1-25em"
                   >Looks like this is not an email</span
                 >
               </div>
 
-              <!-- Password -->
+              <!-- ! Password -->
               <input
-                class="input-box"
+                class="input-box mb-1-25em text-xl p-5 pl-10"
                 type="password"
                 name="password"
                 id="password"
                 placeholder="Password"
               />
 
-              <div class="align-warning-text" id="pw_div">
-                <span class="font-primary-red text-sm italic"
+              <!-- Password Warn -->
+              <div class="align-warning-text hidden" id="pw_div">
+                <span class="font-primary-red text-base italic"
                   >Password cannot be empty</span
                 >
               </div>
 
-              <!-- Submit butt -->
-              <div class="green-butt">
-                <button type="submit">
-                  <span class="uppercase text-white font-semibold text-lg"
-                    >Claim your free trial</span
-                  >
-                </button>
-              </div>
+              <!-- ! Submit butt -->
+
+              <button class="green-butt mb-4">
+                <span class="uppercase text-white font-semibold text-lg"
+                  >Claim your free trial</span
+                >
+              </button>
             </form>
 
             <!-- Agreement -->
             <div>
-              <p>
+              <p
+                class="font-medium text-sm font-grayish-blue flex justify-center items-center"
+              >
                 By clicking the button, you are agreeing to our
-                <span>Terms and Services</span>
+                <span class="font-primary-red">Terms and Services</span>
               </p>
             </div>
           </div>

@@ -21,6 +21,10 @@
   color: var(--primary-red);
 }
 
+.font-grayish-blue {
+  color: var(--neutral-grayish-blue);
+}
+
 .bg {
   background-image: var(--bg-intro-desktop-path);
   background-color: var(--primary-red);

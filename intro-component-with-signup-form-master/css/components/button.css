@@ -1,13 +1,19 @@
-@import "/css/utils/variables.css";
-
 .green-butt {
   padding: 1rem;
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--primary-green);
-  outline-width: 0.5rem;
-  outline: var(--primary-dark-green);
+  outline-style: solid;
+  outline-width: 0.125rem;
+  outline-color: var(--primary-dark-green);
+}
+
+.green-butt:hover,
+.green-butt:focus,
+.green-butt:focus-visible {
+  outline-color: var(--primary-green);
+  background-color: var(--hover-faded-green);
 }

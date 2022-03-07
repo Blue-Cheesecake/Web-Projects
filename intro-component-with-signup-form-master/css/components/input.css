@@ -2,13 +2,18 @@
   display: block;
   border-radius: 0.5rem;
   border-width: 0.05em;
-  border-color: gray;
-  padding: 1em;
+  border-color: hsl(0, 0%, 86%);
   width: 100%;
 }
 
 .input-box:focus,
 .input-box:focus-visible {
-  outline-width: thin;
-  outline-color: var(--neutral-dark-blue);
+  outline-color: var(--accent-blue);
+}
+
+.input-box::placeholder {
+  /* padding: 1em; */
+  color: var(--neutral-dark-blue);
+  font-family: var(--font-primary);
+  font-size: 400;
 }
