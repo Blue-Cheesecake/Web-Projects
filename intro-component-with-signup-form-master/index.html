@@ -50,7 +50,7 @@
 
           <!-- Form -->
           <div class="rounded-lg p-12 bg-white transparent-gray-box-shadow">
-            <form action="" method="get">
+            <form action="" method="">
               <!-- ! First name -->
               <input
                 class="input-box mb-1-25em text-xl p-5 pl-10 font-medium"
@@ -58,13 +58,10 @@
                 name="firstname"
                 id="firstname"
                 placeholder="First Name"
-                required
-                oninvalid="this.setCustomValidity('')"
-                oninput="this.setCustomValidity('')"
               />
 
               <!-- First Warn -->
-              <div class="align-warning-text hidden" id="fn_div">
+              <div class="align-warning-text mb-1-25em hidden" id="fn_div">
                 <span class="font-primary-red text-base italic"
                   >First Name cannot be empty</span
                 >
@@ -77,11 +74,10 @@
                 name="lastname"
                 id="lastname"
                 placeholder="Last Name"
-                required
               />
 
               <!-- Last Warn -->
-              <div class="align-warning-text hidden" id="ln_div">
+              <div class="align-warning-text mb-1-25em hidden" id="ln_div">
                 <span class="font-primary-red text-base italic"
                   >Last Name cannot be empty</span
                 >
@@ -94,11 +90,10 @@
                 name="email"
                 id="email"
                 placeholder="Email Address"
-                required
               />
 
               <!-- Email Warn -->
-              <div class="align-warning-text hidden" id="em_div">
+              <div class="align-warning-text mb-1-25em hidden" id="em_div">
                 <span class="font-primary-red text-base italic mb-1-25em"
                   >Looks like this is not an email</span
                 >
@@ -111,18 +106,17 @@
                 name="password"
                 id="password"
                 placeholder="Password"
-                required
               />
 
               <!-- Password Warn -->
-              <div class="align-warning-text hidden" id="pw_div">
+              <div class="align-warning-text mb-1-25em hidden" id="pw_div">
                 <span class="font-primary-red text-base italic"
                   >Password cannot be empty</span
                 >
               </div>
 
               <!-- ! Submit butt -->
-              <button class="green-butt mb-4">
+              <button class="green-butt mb-4" onclick="checkValidity()">
                 <span class="uppercase text-white font-semibold text-lg"
                   >Claim your free trial</span
                 >
@@ -130,7 +124,7 @@
             </form>
 
             <!-- Agreement -->
-            <div>
+            <div onclick="checkValidity()">
               <p
                 class="font-medium text-sm font-grayish-blue flex justify-center items-center"
               >
@@ -142,6 +136,6 @@
         </section>
       </main>
     </div>
-    <script src="/js/users/index.js"></script>
+    <script src="/js/components/input.js"></script>
   </body>
 </html>

@@ -1,0 +1,2 @@
+- [x] Make JS for input field
+- [ ] Make input.js (checkValidity()) can be used in html
