@@ -8,14 +8,14 @@ const utilities_css_class = {
  * @param {string} id
  * @return {undefined}
  */
-export const hide_node_by_id = (id) =>
+const hide_node_by_id = (id) =>
   document.getElementById(id).classList.add(utilities_css_class.hide_class);
 
 /**
  * @param {string} id
  * @return {undefined}
  */
-export const show_node_by_id = (id) => {
+const show_node_by_id = (id) => {
   let node = document.getElementById(id);
   // check if it contain hidden class
   if (node.classList.contains(hide_class))
@@ -26,7 +26,7 @@ export const show_node_by_id = (id) => {
  * @param {string} id
  * @return {undefined}
  */
-export const remove_margin_bottom_1o25em_class_by_id = (id) => {
+const remove_margin_bottom_1o25em_class_by_id = (id) => {
   document
     .getElementById(id)
     .classList.remove(utilities_css_class.mb_1_25em_class);
@@ -36,7 +36,7 @@ export const remove_margin_bottom_1o25em_class_by_id = (id) => {
  * @param {string} id
  * @return {undefined}
  */
-export const add_margin_bottom_1o25em_class_by_id = (id) => {
+const add_margin_bottom_1o25em_class_by_id = (id) => {
   document
     .getElementById(id)
     .classList.add(utilities_css_class.mb_1_25em_class);
@@ -46,7 +46,7 @@ export const add_margin_bottom_1o25em_class_by_id = (id) => {
  * @param {string} id
  * @return {undefined}
  */
-export const remove_margin_bottom_o05em_class_by_id = (id) => {
+const remove_margin_bottom_o05em_class_by_id = (id) => {
   document
     .getElementById(id)
     .classList.remove(utilities_css_class.mb_05em_class);
@@ -56,6 +56,9 @@ export const remove_margin_bottom_o05em_class_by_id = (id) => {
  * @param {string} id
  * @return {undefined}
  */
-export const add_margin_bottom_o05em_class_by_id = (id) => {
+const add_margin_bottom_o05em_class_by_id = (id) => {
   document.getElementById(id).classList.add(utilities_css_class.mb_05em_class);
 };
+
+module.exports.hide_node_by_id = hide_node_by_id;
+module.exports.show_node_by_id = show_node_by_id;
