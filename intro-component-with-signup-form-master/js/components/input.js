@@ -100,6 +100,30 @@ const remove_warn_icon_by_id = (id) => {
     .classList.remove(utilities_css_class.warn_icon_class);
 };
 
+const validateEmail = (email) => {
+  return email.match(
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+};
+
+const show_warning_by_id = (id_input, id_warn) => {
+  remove_margin_bottom_1o25em_class_by_id(id_input);
+  add_margin_bottom_o05em_class_by_id(id_input);
+  add_warn_icon_by_id(id_input);
+  show_node_by_id(id_warn);
+  remove_white_border_by_id(id_input);
+  make_red_border_by_id(id_input);
+};
+
+const hide_warning_by_id = (id_input, id_warn) => {
+  add_margin_bottom_1o25em_class_by_id(id_input);
+  remove_margin_bottom_o05em_class_by_id(id_input);
+  remove_warn_icon_by_id(id_input);
+  hide_node_by_id(id_warn);
+  make_white_border_by_id(id_input);
+  remove_red_border_by_id(id_input);
+};
+
 const checkValidity_by_id = (id_input, id_warn) => {
   // Not Empty
   const inputObj = document.getElementById(id_input);
@@ -111,32 +135,20 @@ const checkValidity_by_id = (id_input, id_warn) => {
       .getElementById(id_warn)
       .classList.contains(utilities_css_class.hide_class);
 
+    // email case -> validate email
+
     if (!empty_state) {
-      // reverse from empty state
-      add_margin_bottom_1o25em_class_by_id(id_input);
-      remove_margin_bottom_o05em_class_by_id(id_input);
-      remove_warn_icon_by_id(id_input);
-      hide_node_by_id(id_warn);
-      make_white_border_by_id(id_input);
-      remove_red_border_by_id(id_input);
+      hide_warning_by_id(id_input, id_warn);
+      return;
+    }
+
+    if (id_input === "email" && !validateEmail(inputObj.value)) {
+      show_warning_by_id(id_input, id_warn);
+      return;
     }
 
     return;
   }
 
-  // Empty state
-  remove_margin_bottom_1o25em_class_by_id(id_input);
-  add_margin_bottom_o05em_class_by_id(id_input);
-  add_warn_icon_by_id(id_input);
-  show_node_by_id(id_warn);
-  remove_white_border_by_id(id_input);
-  make_red_border_by_id(id_input);
+  show_warning_by_id(id_input, id_warn);
 };
-
-function myFunction(e) {
-  console.log(e);
-  var x = document.getElementById("firstname");
-  x.value = x.value.toUpperCase();
-}
-
-// document.getElementById("testc").addEventListener("click", checkValidity);
