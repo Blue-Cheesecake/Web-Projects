@@ -76,36 +76,57 @@ const remove_red_border_by_id = (id) => {
     .classList.remove(utilities_css_class.red_border_class);
 };
 
+/**
+ * @param {string} id
+ */
 const make_white_border_by_id = (id) => {
   document
     .getElementById(id)
     .classList.add(utilities_css_class.white_border_class);
 };
 
+/**
+ * @param {string} id
+ */
 const remove_white_border_by_id = (id) => {
   document
     .getElementById(id)
     .classList.remove(utilities_css_class.white_border_class);
 };
 
+/**
+ * @param {string} id
+ */
 const add_warn_icon_by_id = (id) => {
   document
     .getElementById(id)
     .classList.add(utilities_css_class.warn_icon_class);
 };
 
+/**
+ * @param {string} id
+ */
 const remove_warn_icon_by_id = (id) => {
   document
     .getElementById(id)
     .classList.remove(utilities_css_class.warn_icon_class);
 };
 
+/**
+ * Validiate the email
+ * @param {string} email email text
+ * @return {boolean} True: Valid, False: invalid
+ */
 const validateEmail = (email) => {
   return email.match(
     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   );
 };
 
+/**
+ * @param {string} id_input id of the input tag
+ * @param {string} id_warn id of warning div of each input
+ */
 const show_warning_by_id = (id_input, id_warn) => {
   remove_margin_bottom_1o25em_class_by_id(id_input);
   add_margin_bottom_o05em_class_by_id(id_input);
@@ -115,6 +136,10 @@ const show_warning_by_id = (id_input, id_warn) => {
   make_red_border_by_id(id_input);
 };
 
+/**
+ * @param {string} id_input id of the input tag
+ * @param {string} id_warn id of warning div of each input
+ */
 const hide_warning_by_id = (id_input, id_warn) => {
   add_margin_bottom_1o25em_class_by_id(id_input);
   remove_margin_bottom_o05em_class_by_id(id_input);
@@ -124,6 +149,10 @@ const hide_warning_by_id = (id_input, id_warn) => {
   remove_red_border_by_id(id_input);
 };
 
+/**
+ * @param {string} id_input id of the input tag
+ * @param {string} id_warn id of warning div of each input
+ */
 const checkValidity_by_id = (id_input, id_warn) => {
   // Not Empty
   const inputObj = document.getElementById(id_input);
