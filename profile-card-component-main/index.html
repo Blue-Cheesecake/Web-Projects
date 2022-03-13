@@ -1,35 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Profile card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Victor Crest
-  26
-  London
+    <link rel="stylesheet" href="/css/tailwind-out.min.css" />
 
-  80K
-  Followers
+    <title>Frontend Mentor | Profile card component</title>
 
-  803K
-  Likes
+    <!-- Taildin guide -->
+    <!-- `margin padding [width height] [position] [How this align] [properties=[text style color border outline...]] [background] [scale] [display]` -->
+  </head>
+  <body
+    class="w-full min-h-screen flex justify-center items-center font-kumbhsans bg-dark_cyan"
+  >
+    <main class="shadow-xl rounded-2xl -z-50 bg-white scale-105">
+      <div class="mb-14 relative">
+        <img
+          src="/images/bg-pattern-card.svg"
+          alt="card-image"
+          class="rounded-t-2xl block"
+        />
 
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div class="w-full h-full absolute top-0 bottom-0 left-0 right-0">
+          <img
+            src="/images/image-victor.jpg"
+            alt="profile-image"
+            class="absolute top-1/2 left-1/2 -translate-x-2/4 rounded-full border-8 border-white"
+          />
+        </div>
+      </div>
+
+      <div class="mb-7 flex justify-center items-center flex-col">
+        <h2 class="font-bold text-xl text-dark_blue">
+          Victor Crest <span class="font-normal text-dark_gray">26</span>
+        </h2>
+        <p class="font-extralight text-dark_gray">London</p>
+      </div>
+
+      <hr />
+
+      <div class="py-7 flex justify-evenly items-center">
+        <div class="flex justify-center items-center flex-col">
+          <h3 class="font-bold text-xl text-dark_blue">80K</h3>
+          <p class="text-xs tracking-widest font-extralight text-dark_gray">
+            Followers
+          </p>
+        </div>
+
+        <div class="flex justify-center items-center flex-col">
+          <h3 class="font-bold text-xl text-dark_blue">803K</h3>
+          <p class="text-xs tracking-widest font-extralight text-dark_gray">
+            Likes
+          </p>
+        </div>
+
+        <div class="flex justify-center items-center flex-col">
+          <h3 class="font-bold text-xl text-dark_blue">1.4K</h3>
+          <p class="text-xs tracking-widest font-extralight text-dark_gray">
+            Photos
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
 </html>
