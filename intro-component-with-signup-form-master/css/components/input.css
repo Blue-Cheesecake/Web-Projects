@@ -1,8 +1,6 @@
 .input-box {
   display: block;
   border-radius: 0.5rem;
-  border-width: 0.05em;
-  border-color: hsl(0, 0%, 86%);
   width: 100%;
 }
 

@@ -2,14 +2,16 @@ const utilities_css_class = {
   hide_class: "hidden",
   mb_1_25em_class: "mb-1-25em",
   mb_05em_class: "mb-05em",
+  red_border_class: "primary-red-border",
 };
 
 /**
  * @param {string} id
  * @return {undefined}
  */
-const hide_node_by_id = (id) =>
+const hide_node_by_id = (id) => {
   document.getElementById(id).classList.add(utilities_css_class.hide_class);
+};
 
 /**
  * @param {string} id
@@ -59,6 +61,3 @@ const remove_margin_bottom_o05em_class_by_id = (id) => {
 const add_margin_bottom_o05em_class_by_id = (id) => {
   document.getElementById(id).classList.add(utilities_css_class.mb_05em_class);
 };
-
-module.exports.hide_node_by_id = hide_node_by_id;
-module.exports.show_node_by_id = show_node_by_id;

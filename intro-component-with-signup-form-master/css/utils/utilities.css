@@ -27,6 +27,11 @@
 }
 
 .primary-red-border {
-  border-width: 0.125em;
+  border-width: 0.1em;
   border-color: var(--primary-red);
+}
+
+.white-border {
+  border-width: 0.05em;
+  border-color: hsl(0, 0%, 86%);
 }

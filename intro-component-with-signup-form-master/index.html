@@ -53,11 +53,12 @@
             <form action="" method="">
               <!-- ! First name -->
               <input
-                class="input-box mb-1-25em text-xl p-5 pl-10 font-medium"
+                class="input-box mb-1-25em text-xl p-5 pl-10 font-medium white-border"
                 type="text"
                 name="firstname"
                 id="firstname"
                 placeholder="First Name"
+                onblur="checkValidity_by_id('firstname','fn_div')"
               />
 
               <!-- First Warn -->
@@ -69,11 +70,12 @@
 
               <!-- ! Last name -->
               <input
-                class="input-box mb-1-25em text-xl p-5 pl-10 font-medium"
+                class="input-box mb-1-25em text-xl p-5 pl-10 font-medium white-border"
                 type="text"
                 name="lastname"
                 id="lastname"
                 placeholder="Last Name"
+                onblur="checkValidity_by_id('lastname','ln_div')"
               />
 
               <!-- Last Warn -->
@@ -85,27 +87,29 @@
 
               <!-- ! Email Address -->
               <input
-                class="input-box mb-1-25em text-xl p-5 pl-10 font-medium"
+                class="input-box mb-1-25em text-xl p-5 pl-10 font-medium white-border"
                 type="email"
                 name="email"
                 id="email"
                 placeholder="Email Address"
+                onblur="checkValidity_by_id('email','em_div')"
               />
 
               <!-- Email Warn -->
               <div class="align-warning-text mb-1-25em hidden" id="em_div">
-                <span class="font-primary-red text-base italic mb-1-25em"
+                <span class="font-primary-red text-base italic"
                   >Looks like this is not an email</span
                 >
               </div>
 
               <!-- ! Password -->
               <input
-                class="input-box mb-1-25em text-xl p-5 pl-10 font-medium"
+                class="input-box mb-1-25em text-xl p-5 pl-10 font-medium white-border"
                 type="password"
                 name="password"
                 id="password"
                 placeholder="Password"
+                onblur="checkValidity_by_id('password','pw_div')"
               />
 
               <!-- Password Warn -->
@@ -116,7 +120,7 @@
               </div>
 
               <!-- ! Submit butt -->
-              <button class="green-butt mb-4" onclick="checkValidity()">
+              <button class="green-butt mb-4">
                 <span class="uppercase text-white font-semibold text-lg"
                   >Claim your free trial</span
                 >
@@ -124,9 +128,10 @@
             </form>
 
             <!-- Agreement -->
-            <div onclick="checkValidity()">
+            <div onclick="">
               <p
                 class="font-medium text-sm font-grayish-blue flex justify-center items-center"
+                id="testc"
               >
                 By clicking the button, you are agreeing to our
                 <span class="font-primary-red">Terms and Services</span>
