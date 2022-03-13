@@ -4,6 +4,7 @@ const utilities_css_class = {
   mb_05em_class: "mb-05em",
   red_border_class: "primary-red-border",
   white_border_class: "white-border",
+  warn_icon_class: "warn-icon-bg",
 };
 
 /**
@@ -87,36 +88,16 @@ const remove_white_border_by_id = (id) => {
     .classList.remove(utilities_css_class.white_border_class);
 };
 
-const checkValidity = () => {
-  const ids_var = {
-    fn: "firstname",
-    ln: "lastname",
-    em: "email",
-    pw: "password",
-    fn_warn: "fn_div",
-    ln_warn: "ln_div",
-    em_warn: "em_div",
-    pw_warn: "pw_div",
-  };
+const add_warn_icon_by_id = (id) => {
+  document
+    .getElementById(id)
+    .classList.add(utilities_css_class.warn_icon_class);
+};
 
-  let fnNode = document.getElementById(ids_var.fn);
-  let lnNode = document.getElementById(ids_var.ln);
-  let emNode = document.getElementById(ids_var.em);
-  let pwNode = document.getElementById(ids_var.pw);
-
-  // Check if it's not empty
-  // if empty =>
-  //  remove mb-1-25em on input,
-  //  add mb-05em on input,
-  //  show warning text
-
-  if (fnNode.value === "") {
-    remove_margin_bottom_1o25em_class_by_id(ids_var.fn);
-    add_margin_bottom_o05em_class_by_id(ids_var.fn);
-    show_node_by_id(ids_var.fn_warn);
-    remove_white_border_by_id(ids_var.fn);
-    make_red_border_by_id(ids_var.fn);
-  }
+const remove_warn_icon_by_id = (id) => {
+  document
+    .getElementById(id)
+    .classList.remove(utilities_css_class.warn_icon_class);
 };
 
 const checkValidity_by_id = (id_input, id_warn) => {
@@ -134,6 +115,7 @@ const checkValidity_by_id = (id_input, id_warn) => {
       // reverse from empty state
       add_margin_bottom_1o25em_class_by_id(id_input);
       remove_margin_bottom_o05em_class_by_id(id_input);
+      remove_warn_icon_by_id(id_input);
       hide_node_by_id(id_warn);
       make_white_border_by_id(id_input);
       remove_red_border_by_id(id_input);
@@ -145,6 +127,7 @@ const checkValidity_by_id = (id_input, id_warn) => {
   // Empty state
   remove_margin_bottom_1o25em_class_by_id(id_input);
   add_margin_bottom_o05em_class_by_id(id_input);
+  add_warn_icon_by_id(id_input);
   show_node_by_id(id_warn);
   remove_white_border_by_id(id_input);
   make_red_border_by_id(id_input);
