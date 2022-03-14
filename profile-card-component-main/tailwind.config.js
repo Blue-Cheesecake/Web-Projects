@@ -11,6 +11,10 @@ module.exports = {
       fontFamily: {
         kumbhsans: ["Kumbh Sans"],
       },
+      backgroundImage: {
+        patternTop: "url('/images/bg-pattern-top.svg')",
+        patternBottom: "url('/images/bg-pattern-bottom.svg')",
+      },
     },
   },
   plugins: [],
