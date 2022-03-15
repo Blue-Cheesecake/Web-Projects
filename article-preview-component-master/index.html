@@ -12,31 +12,59 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="stylesheet" href="/css/vendors/tailwind-out.min.css" />
+
     <title>Frontend Mentor | Article preview component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
-  <body>
-    Shift the overall look and feel by adding these wonderful touches to
-    furniture in your home Ever been in a room and felt like something was
-    missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple
-    tips to help you make any room feel complete. Michelle Appleton 28 Jun 2020
-    Share
+  <body class="min-h-screen flex justify-center items-center font-manrope">
+    <main class="container flex flex-col md:flex-row">
+      <img
+        src="/images/drawers.jpg"
+        alt="drawer-img"
+        class="h-72 w-72 object-cover"
+      />
 
-    <div class="attribution">
+      <article>
+        <section>
+          <h2 class="">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h2>
+        </section>
+
+        <summary class="list-none">
+          <p>
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+        </summary>
+
+        <!-- Profile -->
+        <div>
+          <figure></figure>
+          <section>
+            <!-- Name -->
+            <div>
+              <h3>Michelle Appleton</h3>
+            </div>
+            <!-- Date of birth -->
+            <div>
+              <p>28 Jun 2020</p>
+            </div>
+          </section>
+
+          <!-- Share button -->
+          <div></div>
+        </div>
+      </article>
+    </main>
+
+    <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </div> -->
   </body>
 </html>
