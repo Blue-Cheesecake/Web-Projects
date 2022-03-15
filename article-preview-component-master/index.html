@@ -16,24 +16,22 @@
 
     <title>Frontend Mentor | Article preview component</title>
   </head>
-  <body class="min-h-screen flex justify-center items-center font-manrope">
-    <main class="container flex flex-col md:flex-row">
-      <img
-        src="/images/drawers.jpg"
-        alt="drawer-img"
-        class="h-72 w-72 object-cover"
-      />
-
-      <article>
-        <section>
-          <h2 class="">
+  <body
+    class="min-h-screen flex justify-center items-center bg-lightGrayishBlue font-manrope"
+  >
+    <main
+      class="max-w-2xl flex flex-col md:flex-row rounded-xl overflow-hidden bg-white shadow-lg"
+    >
+      <article class="p-10">
+        <section class="mb-4">
+          <h2 class="text-xl text-darkGrayishBlue font-bold tracking-wide">
             Shift the overall look and feel by adding these wonderful touches to
             furniture in your home
           </h2>
         </section>
 
-        <summary class="list-none">
-          <p>
+        <summary class="mb-4 list-none">
+          <p class="leading-6 text-sm text-grayishBlue font-medium">
             Ever been in a room and felt like something was missing? Perhaps it
             felt slightly bare and uninviting. I’ve got some simple tips to help
             you make any room feel complete.
@@ -41,21 +39,37 @@
         </summary>
 
         <!-- Profile -->
-        <div>
-          <figure></figure>
-          <section>
-            <!-- Name -->
-            <div>
-              <h3>Michelle Appleton</h3>
-            </div>
-            <!-- Date of birth -->
-            <div>
-              <p>28 Jun 2020</p>
-            </div>
-          </section>
+        <div class="flex justify-between items-center">
+          <div class="flex justify-items-start items-center">
+            <figure class="mr-5">
+              <img
+                src="/images/avatar-michelle.jpg"
+                alt="avatar-pic"
+                class="w-14 h-auto rounded-full"
+              />
+            </figure>
+            <section>
+              <!-- Name -->
+              <div class="mb-1">
+                <h3 class="text-base text-darkGrayishBlue font-bold">
+                  Michelle Appleton
+                </h3>
+              </div>
+              <!-- Date of birth -->
+              <div>
+                <p class="text-sm text-grayishBlue font-medium">28 Jun 2020</p>
+              </div>
+            </section>
+          </div>
 
           <!-- Share button -->
-          <div></div>
+          <div class="">
+            <img
+              src="/images/icon-share.svg"
+              alt="share-butt"
+              class="w-5 h-auto"
+            />
+          </div>
         </div>
       </article>
     </main>
