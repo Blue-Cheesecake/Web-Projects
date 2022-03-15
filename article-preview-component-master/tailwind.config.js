@@ -29,6 +29,9 @@ module.exports = {
         30: "28rem",
         40: "41rem",
       },
+      fontSize: {
+        msm: "0.84rem",
+      },
     },
   },
   plugins: [],
