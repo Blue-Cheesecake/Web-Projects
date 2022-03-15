@@ -19,25 +19,33 @@
   <body
     class="min-h-screen flex justify-center items-center bg-lightGrayishBlue font-manrope"
   >
+    <!-- Card -->
     <main
-      class="mx-4 md:m-0 max-w-2xl flex flex-col md:flex-row rounded-xl bg-white shadow-lg"
+      class="w-80 md:m-0 md:w-auto md:max-w-2xl flex flex-col md:flex-row rounded-xl bg-white shadow-lg"
     >
-      <figure class="w-full">
+      <!-- Left image -->
+      <figure class="w-full h-48 md:h-auto">
         <img
           src="/images/drawers.jpg"
           alt="drawers-image"
-          class="w-full sm:h-full rounded-tl-xl rounded-bl-xl object-cover object-left"
+          class="w-full h-full object-cover object-top md:object-left"
         />
       </figure>
+      <!-- End Left Image -->
 
-      <article class="p-10">
+      <!-- Heading -->
+      <article class="p-7 md:p-10">
         <section class="mb-4">
-          <h2 class="text-xl text-darkGrayishBlue font-bold tracking-wide">
+          <h2
+            class="text-base md:text-xl text-darkGrayishBlue font-bold tracking-wide"
+          >
             Shift the overall look and feel by adding these wonderful touches to
             furniture in your home
           </h2>
         </section>
+        <!-- End Heading -->
 
+        <!-- Description -->
         <summary class="mb-4 list-none">
           <p class="leading-6 text-sm text-grayishBlue font-medium">
             Ever been in a room and felt like something was missing? Perhaps it
@@ -45,6 +53,7 @@
             you make any room feel complete.
           </p>
         </summary>
+        <!-- End Description -->
 
         <!-- Profile -->
         <div class="flex justify-between items-center">
@@ -59,13 +68,13 @@
             <section>
               <!-- Name -->
               <div class="mb-1">
-                <h3 class="text-base text-darkGrayishBlue font-bold">
+                <h3 class="text-sm md:text-base text-darkGrayishBlue font-bold">
                   Michelle Appleton
                 </h3>
               </div>
               <!-- Date of birth -->
               <div>
-                <p class="text-sm text-grayishBlue font-medium">28 Jun 2020</p>
+                <p class="text-xs md:text-sm text-grayishBlue font-medium">28 Jun 2020</p>
               </div>
             </section>
           </div>
@@ -74,7 +83,7 @@
           <div class="relative flex flex-col justify-center items-center">
             <!-- Onclick - Share option -->
             <div
-              class="absolute bottom-16 py-5 px-20 flex justify-center items-center bg-darkGrayishBlue rounded-lg shadow-xl"
+              class="absolute md:bottom-16 py-5 px-20 flex justify-center items-center bg-darkGrayishBlue md:rounded-xl shadow-xl hidden"
             >
               <span
                 class="uppercase font-light tracking-customWidest text-grayishBlue"
@@ -96,6 +105,8 @@
                 class="ml-5 2object-contain"
               />
             </div>
+            <!-- End Onclick - Share option -->
+
             <!-- Share button -->
             <div
               class="max-w-max p-3 bg-lightGrayishBlue rounded-full cursor-pointer"
@@ -108,8 +119,10 @@
             </div>
           </div>
         </div>
+        <!-- End Profile -->
       </article>
     </main>
+    <!-- End Card -->
 
     <!-- <div class="attribution">
       Challenge by
