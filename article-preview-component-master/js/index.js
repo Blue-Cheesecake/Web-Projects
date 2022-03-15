@@ -1,5 +1,3 @@
-function print_hello(str) {
-  console.log(str);
+const show_share_option_onclick = () => {
+  
 }
-
-const come = "";

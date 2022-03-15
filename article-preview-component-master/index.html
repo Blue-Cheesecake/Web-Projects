@@ -20,8 +20,16 @@
     class="min-h-screen flex justify-center items-center bg-lightGrayishBlue font-manrope"
   >
     <main
-      class="max-w-2xl flex flex-col md:flex-row rounded-xl overflow-hidden bg-white shadow-lg"
+      class="mx-4 md:m-0 max-w-2xl flex flex-col md:flex-row rounded-xl bg-white shadow-lg"
     >
+      <figure class="w-full">
+        <img
+          src="/images/drawers.jpg"
+          alt="drawers-image"
+          class="w-full sm:h-full rounded-tl-xl rounded-bl-xl object-cover object-left"
+        />
+      </figure>
+
       <article class="p-10">
         <section class="mb-4">
           <h2 class="text-xl text-darkGrayishBlue font-bold tracking-wide">
@@ -62,13 +70,42 @@
             </section>
           </div>
 
-          <!-- Share button -->
-          <div class="">
-            <img
-              src="/images/icon-share.svg"
-              alt="share-butt"
-              class="w-5 h-auto"
-            />
+          <!-- Div of share option -->
+          <div class="relative flex flex-col justify-center items-center">
+            <!-- Onclick - Share option -->
+            <div
+              class="absolute bottom-16 py-5 px-20 flex justify-center items-center bg-darkGrayishBlue rounded-lg shadow-xl"
+            >
+              <span
+                class="uppercase font-light tracking-customWidest text-grayishBlue"
+                >share</span
+              >
+              <img
+                src="/images/icon-facebook.svg"
+                alt="facebook-icon"
+                class="ml-5 object-contain"
+              />
+              <img
+                src="/images/icon-twitter.svg"
+                alt="twitter-icon"
+                class="ml-5 object-contain"
+              />
+              <img
+                src="/images/icon-pinterest.svg"
+                alt="pinterest-icon"
+                class="ml-5 2object-contain"
+              />
+            </div>
+            <!-- Share button -->
+            <div
+              class="max-w-max p-3 bg-lightGrayishBlue rounded-full cursor-pointer"
+            >
+              <img
+                src="/images/icon-share.svg"
+                alt="share-butt"
+                class="w-5 h-auto"
+              />
+            </div>
           </div>
         </div>
       </article>

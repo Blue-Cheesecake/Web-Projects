@@ -22,6 +22,9 @@ module.exports = {
       maxWidth: {
         "2xl": "46rem",
       },
+      letterSpacing: {
+        customWidest: "0.3em",
+      },
     },
   },
   plugins: [],
