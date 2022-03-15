@@ -25,6 +25,10 @@ module.exports = {
       letterSpacing: {
         customWidest: "0.3em",
       },
+      width: {
+        30: "28rem",
+        40: "41rem",
+      },
     },
   },
   plugins: [],
