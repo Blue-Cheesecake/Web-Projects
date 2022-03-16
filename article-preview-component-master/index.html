@@ -89,6 +89,7 @@
             <!-- Onclick - Share option -->
             <div
               class="lg:absolute lg:bottom-20 py-5 px-20 flex justify-center items-center bg-darkGrayishBlue lg:rounded-xl shadow-xl hidden"
+              id="share_options"
             >
               <span
                 class="uppercase font-light tracking-customWidest text-grayishBlue"
@@ -114,7 +115,8 @@
 
             <!-- Share button -->
             <div
-              class="max-w-max p-3 lg:p-3 bg-lightGrayishBlue rounded-full cursor-pointer"
+              class="max-w-max p-3 lg:p-3 bg-lightGrayishBlue rounded-full cursor-pointer select-none"
+              onclick="share_option_onclick()"
             >
               <img
                 src="/images/icon-share.svg"
@@ -135,5 +137,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
+    <script src="/js/index.js"></script>
   </body>
 </html>
