@@ -8,7 +8,7 @@ import Submit from "./rating/submit.component";
 export default function Card({ setState }) {
   const headContent = "How did we do?";
   const bodyContent =
-    "Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering";
+    "Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!";
 
   // console.log(`[Card] setCurrentValue func: ${setState}`);
 
@@ -28,9 +28,9 @@ export default function Card({ setState }) {
   });
 
   return (
-    <div className="bg-lightBlue p-6 rounded-2xl w-80 sm:w-auto">
+    <div className="bg-lightBlue p-5 rounded-2xl w-80 sm:w-88">
       <Contents head={headContent} body={bodyContent} />
-      <div className="flex justify-between">{valuesRating}</div>
+      <div className="flex justify-between mb-6">{valuesRating}</div>
       <Submit setFinal={setState} value={currentValue} />
     </div>
   );

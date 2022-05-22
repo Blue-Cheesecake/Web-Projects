@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function RatingButton({ value, setCurr, currValue }) {
   if (value === currValue) {
     return (
       <button
         onClick={() => {}}
-        className=" bg-primaryOrange px-5 py-4 rounded-full flex justify-center items-center text-white"
+        className=" bg-primaryOrange relative p-6 rounded-full text-white"
       >
-        <span className="text-sm">{value}</span>
+        <p className="absolute translate-x-1/2 translate-y-1/2 bottom-1/2 right-1/2  text-sm">
+          {value}
+        </p>
       </button>
     );
   }
@@ -18,9 +20,11 @@ export default function RatingButton({ value, setCurr, currValue }) {
         setCurr(value);
         console.log(`[Rating ${value}] Changed Value`);
       }}
-      className=" bg-darkBlue px-5 py-4 rounded-full flex justify-center items-center text-mediumGrey  hover:bg-lightGrey hover:text-white"
+      className=" bg-darkBlue relative p-6  rounded-full text-mediumGrey hover:bg-lightGrey hover:text-white"
     >
-      <span className="text-sm">{value}</span>
+      <p className="absolute translate-x-1/2 translate-y-1/2 bottom-1/2 right-1/2  text-sm">
+        {value}
+      </p>
     </button>
   );
 }

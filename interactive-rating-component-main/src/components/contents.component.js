@@ -10,11 +10,14 @@ import starLogo from "../images/icon-star.svg";
 export default function Contents({ head, body }) {
   return (
     <div>
-      <span className="bg-darkBlue rounded-full px-2 py-2">
-        <img src={starLogo} className="inline scale-75"></img>
+      <span className="bg-darkBlue relative p-6 rounded-full inline-block">
+        <img
+          src={starLogo}
+          className="absolute translate-x-1/2 translate-y-1/2 bottom-1/2 right-1/2 "
+        ></img>
       </span>
-      <h2 className="text-xl text-white">{head}</h2>
-      <p className="text-sm text-lightGrey">{body}</p>
+      <h2 className="text-2xl text-white mt-4 mb-4">{head}</h2>
+      <p className="text-sm text-lightGrey mb-6">{body}</p>
     </div>
   );
 }

@@ -17,6 +17,9 @@ module.exports = {
       fontFamily: {
         Overpass: ["Overpass", "sans-serif"],
       },
+      spacing: {
+        88: "350px",
+      },
     },
   },
   plugins: [],
