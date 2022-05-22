@@ -8,19 +8,21 @@ import Card from "./components/card.component";
 import CardResult from "./components/cardResult.component";
 
 export default function App() {
-  const [currentValue, setCurrentValue] = useState(-1);
+  const [finalValue, setFinalValue] = useState(-1);
 
-  if (currentValue !== -1) {
+  console.log(`[App] Current Value: ${finalValue}`);
+
+  if (finalValue !== -1) {
     return (
       <div className="flex justify-center items-center h-screen font-Overpass bg-veryDarkBlue">
-        <CardResult value={currentValue} />
+        <CardResult value={finalValue} />
       </div>
     );
   }
 
   return (
     <div className="flex justify-center items-center h-screen font-Overpass bg-veryDarkBlue">
-      <Card state={setCurrentValue} />
+      <Card setState={setFinalValue} />
     </div>
   );
 }
