@@ -1,7 +1,16 @@
 module.exports = {
-  content: ["./src/**/*.{js, jsx}", "./public/*.{html, js}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./node_modules/flowbite/**/*.js"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        almostWhite: "hsl(0, 0%, 98%)",
+        mediumGrey: "hsl(0, 0%, 41%)",
+        almostBlack: "hsl(0, 0%, 8%)",
+      },
+      fontFamily: {
+        Epilogue: ["Epilogue", "sans-serif"],
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
