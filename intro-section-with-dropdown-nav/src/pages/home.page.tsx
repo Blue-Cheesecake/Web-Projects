@@ -1,6 +1,7 @@
 import React from "react";
 
 import imageHeroDesktop from "../images/image-hero-desktop.png";
+import imageHeroMobile from "../images/image-hero-mobile.png";
 import imageClientAudiophile from "../images/client-audiophile.svg";
 import imageClientDatabiz from "../images/client-databiz.svg";
 import imageClientMaker from "../images/client-maker.svg";
@@ -9,28 +10,57 @@ import imageClientMeet from "../images/client-meet.svg";
 // Common
 import { NavBar } from "../common/nav-bar/navbar.common";
 
-export const Home = () => {
+export const Home: React.FC = () => {
   return (
-    <div className="font-epilogue">
+    <div className="font-epilogue w-screen overflow-hidden">
       <NavBar />
-      <main className="flex justify-center items-center p-24">
-        <section className="mr-48">
-          <h1 className="text-8xl font-bold mb-12">Make remote work</h1>
-          <p className="mb-16 pr-36">
+      <img
+        src={imageHeroMobile}
+        alt="image hero mobile"
+        className="md:hidden w-full h-auto"
+      />
+      <main className="flex justify-center items-center p-6 md:p-24">
+        <section className="md:mr-48">
+          <h1 className="text-center text-3xl font-bold  md:text-left md:text-8xl mb-8 md:mb-12">
+            Make remote work
+          </h1>
+          <p className="mb-8 md:mb-16 px-8 md:px-0 md:pr-36 text-center md:text-left text-xs md:text-xl text-mediumGray font-medium">
             Get your team in sync, no matter your location. Streamline
             processes, create team rituals, and watch productivity soar.
           </p>
-          <button className="bg-almostBlack hover:bg-almostWhite text-almostWhite hover:text-almostBlack py-4 px-9 rounded-xl border border-almostBlack text-lg">
-            Learn more
-          </button>
-          <div className="mt-10 w-full flex justify-between items-center px-4">
-            <img src={imageClientDatabiz} alt="image client databiz" />
-            <img src={imageClientAudiophile} alt="image client audiophile" />
-            <img src={imageClientMeet} alt="image client meet" />
-            <img src={imageClientMaker} alt="image client maker" />
+          <div className="flex justify-center items-center md:block">
+            <button className="bg-almostBlack hover:bg-almostWhite text-almostWhite hover:text-almostBlack py-3 px-4 md:py-4 md:px-9 rounded-xl border border-almostBlack text-base md:text-lg">
+              Learn more
+            </button>
+          </div>
+          <div className="mt-8 md:mt-16 w-full flex justify-between items-center md:px-4">
+            <img
+              src={imageClientDatabiz}
+              alt="image client databiz"
+              className="w-20 md:w-auto"
+            />
+            <img
+              src={imageClientAudiophile}
+              alt="image client audiophile"
+              className="w-10 md:w-auto"
+            />
+            <img
+              src={imageClientMeet}
+              alt="image client meet"
+              className="w-20 md:w-auto"
+            />
+            <img
+              src={imageClientMaker}
+              alt="image client maker"
+              className="w-20 md:w-auto"
+            />
           </div>
         </section>
-        <img src={imageHeroDesktop} alt="image" className="w-1/3" />
+        <img
+          src={imageHeroDesktop}
+          alt="image"
+          className="w-1/3 hidden md:block"
+        />
       </main>
     </div>
   );

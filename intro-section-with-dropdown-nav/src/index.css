@@ -8,8 +8,4 @@
   a {
     @apply text-xl text-mediumGray hover:text-almostBlack;
   }
-
-  p {
-    @apply text-xl text-mediumGray font-medium;
-  }
 }
