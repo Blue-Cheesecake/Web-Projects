@@ -19,10 +19,10 @@ export const Home: React.FC = () => {
         alt="image hero mobile"
         className="md:hidden w-full h-auto"
       />
-      <main className="flex justify-center items-center p-6 md:p-24">
-        <section className="md:mr-48">
+      <main className="py-8 px-24 w-full flex justify-center items-center">
+        <section className="md:mr-40">
           <h1 className="text-center text-3xl font-bold  md:text-left md:text-8xl mb-8 md:mb-12">
-            Make remote work
+            Make <br /> remote work
           </h1>
           <p className="mb-8 md:mb-16 px-8 md:px-0 md:pr-36 text-center md:text-left text-xs md:text-xl text-mediumGray font-medium">
             Get your team in sync, no matter your location. Streamline
@@ -59,7 +59,7 @@ export const Home: React.FC = () => {
         <img
           src={imageHeroDesktop}
           alt="image"
-          className="w-1/3 hidden md:block"
+          className="max-w-md hidden md:block"
         />
       </main>
     </div>

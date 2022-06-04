@@ -43,22 +43,22 @@ const companyDropdown: DropDownItem = {
 export const NavBar: React.FC = () => {
   return (
     <nav className="bg-white">
-      <div className="p-6 flex justify-between items-center">
+      <div className="p-8 flex justify-between items-center">
         <div className="flex justify-between items-center">
-          <h2 className="text-4xl text-black mr-6">snap</h2>
-          <div className="mr-6">
+          <h2 className="text-4xl text-black mr-11 font-semibold">snap</h2>
+          <div className="mr-11">
             <DropDown
               dropdownText={featuresDropdown.dropdownText}
               items={featuresDropdown.items}
             />
           </div>
-          <div className="mr-6">
+          <div className="mr-11">
             <DropDown
               dropdownText={companyDropdown.dropdownText}
               items={companyDropdown.items}
             />
           </div>
-          <a href="#" className="mr-6">
+          <a href="#" className="mr-11">
             Careers
           </a>
           <a href="#" className="">
