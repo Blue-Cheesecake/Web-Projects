@@ -6,6 +6,6 @@
 
 @layer base {
   a {
-    @apply text-xl text-mediumGray hover:text-almostBlack;
+    @apply text-mediumGray hover:text-almostBlack;
   }
 }
