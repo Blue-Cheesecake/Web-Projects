@@ -1,6 +1,10 @@
 import React from "react";
 import { Menu, Transition } from "@headlessui/react";
 
+// icons
+import icon_arrow_up from "../../images/icon-arrow-up.svg";
+import icon_arrow_down from "../../images/icon-arrow-down.svg";
+
 interface Item {
   icon: string | undefined;
   linkText: string;
@@ -37,7 +41,14 @@ export const DropDown: React.FC<Props> = ({ dropdownText, items }: Props) => {
         as="div"
         className="text-mediumGray hover:text-almostBlack cursor-pointer"
       >
-        {dropdownText}
+        {({ open }: { open: boolean }) => (
+          <div className="flex justify-center items-center">
+            <span className="mr-2">{dropdownText}</span>{" "}
+            <span>
+              <img src={open ? icon_arrow_up : icon_arrow_down} alt="icon" />
+            </span>
+          </div>
+        )}
       </Menu.Button>
       <Transition
         enter="transition ease-out duration-100"
