@@ -10,6 +10,7 @@ import icon_reminders from "../../images/icon-reminders.svg";
 import icon_planning from "../../images/icon-planning.svg";
 import icon_menu from "../../images/icon-menu.svg";
 import icon_close_menu from "../../images/icon-close-menu.svg";
+import DisclosureItem from "../../components/disclosure/disclosure.component";
 
 interface Item {
   icon: string | undefined;
@@ -83,10 +84,9 @@ export const NavBar: React.FC = () => {
       </div>
 
       {/* Mobile menu */}
-      <div className="md:hidden flex justify-between items-center p-5">
+      <div className="relative md:hidden flex justify-between items-center p-5">
         <h2 className="text-4xl text-black mr-11 font-semibold">snap</h2>
-        <div>
-          {/* menu button */}
+        <div className="z-40">
           <button
             onClick={(e) => {
               setIsDisplayingMobileNavbar(!isDisplayingMobileNavbar);
@@ -97,6 +97,41 @@ export const NavBar: React.FC = () => {
               alt="icon menu"
             />
           </button>
+        </div>
+        <div
+          className={
+            isDisplayingMobileNavbar
+              ? "absolute bg-red-300 w-60 transform top-0 right-0 z-30"
+              : "hidden"
+          }
+        >
+          <div className="mt-20 w-full px-6 h-screen">
+            <DisclosureItem
+              dropdownText={featuresDropdown.dropdownText}
+              items={featuresDropdown.items}
+            />
+            <DisclosureItem
+              dropdownText={companyDropdown.dropdownText}
+              items={companyDropdown.items}
+            />
+            <a href="#" className="block mb-3">
+              Careers
+            </a>
+            <a href="#" className="block mb-8">
+              About
+            </a>
+            <div className="flex flex-col justify-center items-center">
+              <a href="#" className="mb-5">
+                Login
+              </a>
+              <a
+                href="#"
+                className="block w-full border border-almostBlack rounded-xl text-center py-3"
+              >
+                Register
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>

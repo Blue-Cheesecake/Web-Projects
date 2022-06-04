@@ -12,7 +12,7 @@ import { NavBar } from "../common/nav-bar/navbar.common";
 
 export const Home: React.FC = () => {
   return (
-    <div className="font-epilogue w-screen overflow-hidden">
+    <div className="font-epilogue w-screen h-screen overflow-hidden">
       <NavBar />
       <img
         src={imageHeroMobile}
