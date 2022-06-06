@@ -101,7 +101,7 @@ export const NavBar: React.FC = () => {
         <div
           className={
             isDisplayingMobileNavbar
-              ? "absolute bg-red-300 w-60 transform top-0 right-0 z-30"
+              ? "absolute bg-white w-60 transform top-0 right-0 z-30"
               : "hidden"
           }
         >
