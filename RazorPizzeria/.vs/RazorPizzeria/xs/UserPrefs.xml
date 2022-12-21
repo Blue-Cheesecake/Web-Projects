@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{C1813C57-7087-4CDA-B0FE-477A84B1C24B}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RazorPizzeria/Pages/Pizza.cshtml">
+    <Files>
+      <File FileName="RazorPizzeria/Data/ApplicationDbContext.cs" Line="13" Column="1" />
+      <File FileName="RazorPizzeria/appsettings.json" />
+      <File FileName="RazorPizzeria/Migrations/20221220155819_addedPizzaOrder.cs" Line="9" Column="6" />
+      <File FileName="RazorPizzeria/Models/PizzaOrder.cs" Line="12" Column="1" />
+      <File FileName="RazorPizzeria/Models/PizzasModel.cs" Line="1" Column="1" />
+      <File FileName="RazorPizzeria/Pages/Pizza.cshtml" Line="27" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RazorPizzeria" expanded="True">
+            <Node name="RazorPizzeria" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True">
+                <Node name="20221220155819_addedPizzaOrder.cs" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="Checkout" expanded="True" />
+                <Node name="Form" expanded="True" />
+                <Node name="Pizza.cshtml" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.RazorPizzeria FirstBuild="True" PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+</Properties>
