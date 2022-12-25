@@ -1,17 +1,27 @@
 class Customer {
-  Customer(
+  Customer({
     this.name,
     this.email,
     this.phoneNumber,
     this.plan,
     this.addOns,
-  );
+  });
 
   String? name;
   String? email;
   int? phoneNumber;
   Plan? plan;
-  List<AddOn>? addOns;
+  List<AddOn>? addOns = [];
+
+  Customer clone() {
+    return Customer(
+      name: name,
+      email: email,
+      phoneNumber: phoneNumber,
+      plan: plan,
+      addOns: addOns,
+    );
+  }
 }
 
 class Plan {
