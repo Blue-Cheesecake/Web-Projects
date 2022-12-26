@@ -13,6 +13,7 @@ class PhoneInputBox extends StatelessWidget {
         return InputLayout(
           txtTitle: "Phone Number",
           placeholder: "e.g. +1 234 567 890",
+          initialValue: state.customer.phoneNumber?.toString(),
           changeInfoBLoC: (val) {
             // remove all space in string
             try {

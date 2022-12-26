@@ -19,6 +19,9 @@ class Kolor {
   final magnolia = const HSLColor.fromAHSL(1, 217, 1.00, 0.97).toColor();
   final alabaster = const HSLColor.fromAHSL(1, 231, 1.00, 0.99).toColor();
   final white = const HSLColor.fromAHSL(1, 0, 0, 1.00).toColor();
+
+  // wtf
+  final buttonHover = const HSLColor.fromAHSL(1, 213, 0.71, 0.31).toColor();
 }
 
 class FontSize {

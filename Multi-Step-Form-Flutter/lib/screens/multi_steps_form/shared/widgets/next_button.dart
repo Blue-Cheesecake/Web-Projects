@@ -26,7 +26,7 @@ class NextButton extends StatelessWidget {
             ),
             backgroundColor: MaterialStateProperty.all(Style.color.marineBlue),
             foregroundColor: MaterialStateProperty.all(Style.color.alabaster),
-            overlayColor: MaterialStateProperty.all(Style.color.pastelBlue),
+            overlayColor: MaterialStateProperty.all(Style.color.buttonHover),
           ),
           child: const Text("Next Step"),
         );

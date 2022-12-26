@@ -13,6 +13,7 @@ class NameInputBox extends StatelessWidget {
         return InputLayout(
           txtTitle: "Name",
           placeholder: "e.g. Stephen King",
+          initialValue: state.customer.name,
           changeInfoBLoC: (val) {
             context
                 .read<CustomerInfoBloc>()

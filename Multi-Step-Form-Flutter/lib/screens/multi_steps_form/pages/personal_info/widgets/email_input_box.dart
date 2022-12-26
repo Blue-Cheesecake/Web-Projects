@@ -13,6 +13,7 @@ class EmailInputBox extends StatelessWidget {
         return InputLayout(
           txtTitle: "Email Address",
           placeholder: "e.g. stephenking@lorem.com",
+          initialValue: state.customer.email,
           changeInfoBLoC: (val) {
             context
                 .read<CustomerInfoBloc>()
