@@ -11,7 +11,8 @@ import 'package:multi_step_form/screens/multi_steps_form/shared/widgets/step_tit
 class PersonalInfo extends StatelessWidget {
   const PersonalInfo({Key? key}) : super(key: key);
 
-  // TODO: Disable next step button if there's missing input
+  // TODO: Validate Email
+  // TODO: Validate phone number
   // TODO: When click disable button, it should show error of empty input box.
 
   Widget _content(BuildContext context) {

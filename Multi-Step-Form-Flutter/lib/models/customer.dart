@@ -25,6 +25,10 @@ class Customer {
     );
   }
 
+  bool isMissingPersonalInfo() {
+    return name == null || email == null || phoneNumber == null;
+  }
+
   @override
   String toString() {
     return "[Customer] Name: $name, Email: $email, Phone: $phoneNumber, Add Ons: $addOns, Plan: $plan";
@@ -32,10 +36,8 @@ class Customer {
 }
 
 class Plan {
-  Plan(
-    this.name,
-    this.perMonth,
-  );
+  Plan(this.name,
+      this.perMonth,);
 
   PlanName name;
   bool perMonth;
@@ -71,10 +73,8 @@ enum PlanName {
 }
 
 class AddOn {
-  AddOn(
-    this.name,
-    this.cost,
-  );
+  AddOn(this.name,
+      this.cost,);
 
   AddOnName name;
   double cost;
