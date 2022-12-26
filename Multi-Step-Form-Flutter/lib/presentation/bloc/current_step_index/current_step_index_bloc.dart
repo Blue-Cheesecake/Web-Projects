@@ -21,8 +21,6 @@ class CurrentStepIndexBloc
         );
       }
       emit(state.copyWith(state.currentStepIndex + 1));
-
-      print("curr: ${state.currentStepIndex}");
     });
 
     on<CurrentStepIndexEventPrevious>((event, emit) {
@@ -37,8 +35,6 @@ class CurrentStepIndexBloc
       }
 
       emit(state.copyWith(state.currentStepIndex - 1));
-
-      print("curr: ${state.currentStepIndex}");
     });
   }
 }

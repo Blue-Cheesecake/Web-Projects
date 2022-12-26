@@ -7,6 +7,7 @@ import 'package:multi_step_form/screens/multi_steps_form/pages/personal_info/per
 import 'package:multi_step_form/screens/multi_steps_form/pages/select_plan/select_plan.dart';
 import 'package:multi_step_form/screens/multi_steps_form/pages/summary/summary.dart';
 import 'package:multi_step_form/screens/multi_steps_form/shared/sidebar/sidebar.dart';
+import 'package:multi_step_form/utils/screen_configuration.dart';
 import 'package:multi_step_form/utils/styles.dart';
 
 class MultiStepsForm extends StatefulWidget {
@@ -26,8 +27,32 @@ class _MultiStepsFormState extends State<MultiStepsForm> {
     Summary(),
   ];
 
+  Widget _webLayout() {
+    return BlocBuilder<CurrentStepIndexBloc, CurrentStepIndexState>(
+      builder: (context, state) {
+        return Row(
+          children: [
+            Sidebar(),
+            pageSequence[state.currentStepIndex],
+          ],
+        );
+      },
+    );
+  }
+
+  Widget _mobileLayout() {
+    return Container();
+  }
+
   @override
   Widget build(BuildContext context) {
+    late Widget layout;
+    if (ScreenConfiguration.isMobileLayout(context)) {
+      layout = _mobileLayout();
+    } else {
+      layout = _webLayout();
+    }
+
     return Scaffold(
       backgroundColor: Style.color.magnolia,
       body: SafeArea(
@@ -39,16 +64,7 @@ class _MultiStepsFormState extends State<MultiStepsForm> {
             decoration: BoxDecoration(
               color: Style.color.white,
             ),
-            child: BlocBuilder<CurrentStepIndexBloc, CurrentStepIndexState>(
-              builder: (context, state) {
-                return Row(
-                  children: [
-                    Sidebar(),
-                    pageSequence[state.currentStepIndex],
-                  ],
-                );
-              },
-            ),
+            child: layout,
           ),
         ),
       ),

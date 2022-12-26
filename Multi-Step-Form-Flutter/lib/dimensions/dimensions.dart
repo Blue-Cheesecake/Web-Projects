@@ -10,10 +10,10 @@ class Dimensions {
 
 class Web implements IMainCard, ISideBar, IAddOns, ISelectPlan, ISummary {
   @override
-  double cardWidth = 800.0;
+  double cardWidth = 900.0;
 
   @override
-  double cardHeight = 650.0;
+  double cardHeight = 630.0;
 
   @override
   double paddingAround = 15.0;
@@ -25,7 +25,7 @@ class Web implements IMainCard, ISideBar, IAddOns, ISelectPlan, ISummary {
   double paddingSideBar = 20.0;
 
   @override
-  double sideBarWidth = 300.0;
+  double sideBarWidth = 250.0;
 
   @override
   double addonsBoxHeight = 30.0;
@@ -38,4 +38,7 @@ class Web implements IMainCard, ISideBar, IAddOns, ISelectPlan, ISummary {
 
   @override
   double sumInnerBoxPadding = 20.0;
+
+  @override
+  double paddingStepCircle = 13.0;
 }
