@@ -20,10 +20,10 @@ class Web
         ISummary,
         IButton {
   @override
-  double cardWidth = 900.0;
+  double cardWidth = 950.0;
 
   @override
-  double cardHeight = 630.0;
+  double cardHeight = 600.0;
 
   @override
   double paddingAround = 15.0;
@@ -32,10 +32,16 @@ class Web
   double internalWidth = 500.0;
 
   @override
+  double enormousHeightSpacing = 50.0;
+
+  @override
   double largeHeightSpacing = 25.0;
 
   @override
   double mediumHeightSpacing = 10.0;
+
+  @override
+  double smallHeightSpacing = 5.0;
 
   @override
   double paddingSideBar = 20.0;
@@ -50,7 +56,28 @@ class Web
   double planBoxHeight = 35.0;
 
   @override
-  double planBoxWidth = 20.0;
+  double planBoxWidth = 140.0;
+
+  @override
+  double planBoxMarginSpacing = 45.0;
+
+  @override
+  double planBoxSwitchVerticalPadding = 10.0;
+
+  @override
+  double planSwitchHeight = 21;
+
+  @override
+  double planSwitchWidth = 45.0;
+
+  @override
+  double planSwitchPadding = 1;
+
+  @override
+  double planBoxBorderWidth = 1.5;
+
+  @override
+  double planBoxBorderRadius = 8.5;
 
   @override
   double sumInnerBoxPadding = 20.0;

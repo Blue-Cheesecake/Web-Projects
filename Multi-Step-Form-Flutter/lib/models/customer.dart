@@ -1,16 +1,18 @@
+import 'package:multi_step_form/constants/available_plans.dart';
+
 class Customer {
   Customer({
     this.name,
     this.email,
     this.phoneNumber,
-    this.plan,
+    required this.plan,
     this.addOns,
   });
 
   String? name;
   String? email;
   int? phoneNumber;
-  Plan? plan;
+  Plan plan;
   List<AddOn>? addOns = [];
 
   Customer clone() {
@@ -23,21 +25,43 @@ class Customer {
     );
   }
 
-
   @override
   String toString() {
-    return "[Customer] Name: $name, Email: $email, Phone: $phoneNumber, Add Ons: $addOns";
+    return "[Customer] Name: $name, Email: $email, Phone: $phoneNumber, Add Ons: $addOns, Plan: $plan";
   }
 }
 
 class Plan {
-  Plan(this.name,
-      this.perMonth,
-      this.cost,);
+  Plan(
+    this.name,
+    this.perMonth,
+  );
 
   PlanName name;
   bool perMonth;
-  double cost;
+
+  double get cost {
+    if (perMonth) {
+      return AvailablePlans.costPerMonth[name]!;
+    }
+    return AvailablePlans.costPerYear[name]!;
+  }
+
+  String get imagePath {
+    if (name == PlanName.arcade) {
+      return "assets/images/icon-arcade.svg";
+    }
+    if (name == PlanName.advanced) {
+      return "assets/images/icon-advanced.svg";
+    }
+
+    return "assets/images/icon-pro.svg";
+  }
+
+  @override
+  String toString() {
+    return "${name.toString()} ${perMonth ? "Monthly" : "Yearly"}";
+  }
 }
 
 enum PlanName {
@@ -47,8 +71,10 @@ enum PlanName {
 }
 
 class AddOn {
-  AddOn(this.name,
-      this.cost,);
+  AddOn(
+    this.name,
+    this.cost,
+  );
 
   AddOnName name;
   double cost;

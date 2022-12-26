@@ -25,5 +25,6 @@ class FontSize {
   final double stepTitle = 28.0;
   final double paragraph = 14.0;
   final double sidebarSpacing = 1.5;
-  final double subtitleSpacing = 1.05;
+  final double subtitleSpacing = 0.5;
+  final double smallParagraph = 12.5;
 }
