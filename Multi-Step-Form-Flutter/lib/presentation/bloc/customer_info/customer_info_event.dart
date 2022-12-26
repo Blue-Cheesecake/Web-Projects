@@ -5,11 +5,11 @@ abstract class CustomerInfoEvent extends Equatable {
 }
 
 class CustomerInfoEventChangeInfo extends CustomerInfoEvent {
-  final String name;
-  final String email;
-  final int phoneNumber;
+  final String? name;
+  final String? email;
+  final int? phoneNumber;
 
-  const CustomerInfoEventChangeInfo(this.name, this.email, this.phoneNumber);
+  const CustomerInfoEventChangeInfo({this.name, this.email, this.phoneNumber});
 
   @override
   List<Object?> get props => [name, email, phoneNumber];

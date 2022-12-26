@@ -11,10 +11,12 @@ class CustomerInfoBloc extends Bloc<CustomerInfoEvent, CustomerInfoState> {
       // The state derives the way to change value
       // The event derives the parameters
       emit(state.changePersonalInfo(
-        event.name,
-        event.email,
-        event.phoneNumber,
+        event.name ?? state.customer.name,
+        event.email ?? state.customer.email,
+        event.phoneNumber ?? state.customer.phoneNumber,
       ));
+      
+      print(state.customer);
     });
     on<CustomerInfoEventSelectPlan>((event, emit) {
       emit(state.selectPlan(event.newPlan));

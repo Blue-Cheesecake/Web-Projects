@@ -6,9 +6,9 @@ class CustomerInfoState extends Equatable {
   const CustomerInfoState(this.customer);
 
   CustomerInfoState changePersonalInfo(
-    String name,
-    String email,
-    int phoneNumber,
+    String? name,
+    String? email,
+    int? phoneNumber,
   ) {
     Customer modifiedCustomer = customer.clone();
     modifiedCustomer.name = name;

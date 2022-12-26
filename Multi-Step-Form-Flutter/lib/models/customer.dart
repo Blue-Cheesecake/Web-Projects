@@ -22,14 +22,18 @@ class Customer {
       addOns: addOns,
     );
   }
+
+
+  @override
+  String toString() {
+    return "[Customer] Name: $name, Email: $email, Phone: $phoneNumber, Add Ons: $addOns";
+  }
 }
 
 class Plan {
-  Plan(
-    this.name,
-    this.perMonth,
-    this.cost,
-  );
+  Plan(this.name,
+      this.perMonth,
+      this.cost,);
 
   PlanName name;
   bool perMonth;
@@ -43,10 +47,8 @@ enum PlanName {
 }
 
 class AddOn {
-  AddOn(
-    this.name,
-    this.cost,
-  );
+  AddOn(this.name,
+      this.cost,);
 
   AddOnName name;
   double cost;
