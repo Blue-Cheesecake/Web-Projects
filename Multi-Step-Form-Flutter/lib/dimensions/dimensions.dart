@@ -41,4 +41,7 @@ class Web implements IMainCard, ISideBar, IAddOns, ISelectPlan, ISummary {
 
   @override
   double paddingStepCircle = 13.0;
+
+  @override
+  double marginBottomTitle = 5;
 }

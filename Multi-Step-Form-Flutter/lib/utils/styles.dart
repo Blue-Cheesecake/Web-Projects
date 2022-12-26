@@ -22,5 +22,6 @@ class Kolor {
 }
 
 class FontSize {
-  final double paragraph = 16.0;
+  final double paragraph = 14.0;
+  final double spacing = 1.5;
 }

@@ -18,49 +18,56 @@ class Sidebar extends StatelessWidget {
   Widget _webLayout() {
     return BlocBuilder<CurrentStepIndexBloc, CurrentStepIndexState>(
         builder: (context, state) {
-          return SizedBox(
-            width: Dimensions.web.sideBarWidth,
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                SvgPicture.asset(
-                  "assets/images/bg-sidebar-desktop.svg",
-                  fit: BoxFit.fill,
-                ),
-                Padding(
-                  padding: EdgeInsets.all(Dimensions.web.paddingSideBar),
-                  child: ListView(
-                    children: steps.map((step) {
-                      int index = steps.indexOf(step);
-                      bool isSelected = state.currentStepIndex == index;
-
-                      return ListTile(
-
-                        // TODO: Make this Circle Center between title and subtitle
-                        leading: StepCircle(
-                          step: index + 1,
-                          isSelected: isSelected,
-                        ),
-                        title: Text(
-                          "STEP ${index + 1}",
-                          style: TextStyle(
-                            color: Style.color.pastelBlue,
-                          ),
-                        ),
-                        subtitle: Text(
-                          step.title,
-                          style: TextStyle(
-                            color: Style.color.white,
-                          ),
-                        ),
-                      );
-                    }).toList(),
-                  ),
-                )
-              ],
+      return SizedBox(
+        width: Dimensions.web.sideBarWidth,
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            SvgPicture.asset(
+              "assets/images/bg-sidebar-desktop.svg",
+              fit: BoxFit.fill,
             ),
-          );
-        });
+            Padding(
+              padding: EdgeInsets.all(Dimensions.web.paddingSideBar),
+              child: ListView(
+                children: steps.map((step) {
+                  int index = steps.indexOf(step);
+                  bool isSelected = state.currentStepIndex == index;
+
+                  return ListTile(
+                    leading: StepCircle(
+                      step: index + 1,
+                      isSelected: isSelected,
+                    ),
+                    minLeadingWidth: 10,
+                    title: Padding(
+                      padding: EdgeInsets.only(
+                          bottom: Dimensions.web.marginBottomTitle),
+                      child: Text(
+                        "STEP ${index + 1}",
+                        style: TextStyle(
+                          fontSize: Style.fontSize.paragraph,
+                          color: Style.color.pastelBlue,
+                        ),
+                      ),
+                    ),
+                    subtitle: Text(
+                      step.title,
+                      style: TextStyle(
+                        fontSize: Style.fontSize.paragraph,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: Style.fontSize.spacing,
+                        color: Style.color.white,
+                      ),
+                    ),
+                  );
+                }).toList(),
+              ),
+            )
+          ],
+        ),
+      );
+    });
   }
 
   @override
