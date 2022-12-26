@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:multi_step_form/screens/multi_steps_form/shared/widgets/go_back_button.dart';
-import 'package:multi_step_form/screens/multi_steps_form/shared/widgets/next_button.dart';
+import 'package:multi_step_form/screens/multi_steps_form/shared/widgets/step_page_layout.dart';
 
 class SelectPlan extends StatelessWidget {
   const SelectPlan({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
+  Widget _content(BuildContext context) {
     return Column(
       children: [
-        Text("Select Plans"),
-        Row(
-          children: [
-            GoBackButton(),
-            NextButton(),
-          ],
-        )
+        Text("Select Plan"),
       ],
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return StepPageLayout(
+      content: _content(context),
+      haveNextStepButton: true,
+      haveGoBackButton: true,
+      haveConfirmButton: false,
     );
   }
 }

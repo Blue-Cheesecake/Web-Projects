@@ -31,9 +31,15 @@ class _MultiStepsFormState extends State<MultiStepsForm> {
     return BlocBuilder<CurrentStepIndexBloc, CurrentStepIndexState>(
       builder: (context, state) {
         return Row(
+          mainAxisSize: MainAxisSize.max,
           children: [
             Sidebar(),
-            pageSequence[state.currentStepIndex],
+            Flexible(
+              child: Padding(
+                padding: EdgeInsets.all(Dimensions.web.paddingAround),
+                child: Center(child: pageSequence[state.currentStepIndex]),
+              ),
+            ),
           ],
         );
       },

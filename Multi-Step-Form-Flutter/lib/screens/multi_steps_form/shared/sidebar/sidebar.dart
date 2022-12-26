@@ -56,7 +56,7 @@ class Sidebar extends StatelessWidget {
                       style: TextStyle(
                         fontSize: Style.fontSize.paragraph,
                         fontWeight: FontWeight.w500,
-                        letterSpacing: Style.fontSize.spacing,
+                        letterSpacing: Style.fontSize.sidebarSpacing,
                         color: Style.color.white,
                       ),
                     ),

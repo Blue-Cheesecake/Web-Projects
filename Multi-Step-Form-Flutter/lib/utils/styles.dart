@@ -22,6 +22,8 @@ class Kolor {
 }
 
 class FontSize {
+  final double stepTitle = 28.0;
   final double paragraph = 14.0;
-  final double spacing = 1.5;
+  final double sidebarSpacing = 1.5;
+  final double subtitleSpacing = 1.05;
 }

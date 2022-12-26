@@ -3,4 +3,5 @@ abstract class IMainCard {
   late double cardHeight;
   late double paddingAround;
   late double internalWidth;
+  late double heightSpacing;
 }
