@@ -30,5 +30,7 @@ class FontSize {
   final double sidebarSpacing = 1.5;
   final double subtitleSpacing = 0.5;
   final double largeParagraph = 15.0;
+  final double planTitleSummary = 15.4;
+  final double costTotal = 19.0;
   final double smallParagraph = 12.5;
 }

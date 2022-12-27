@@ -83,7 +83,7 @@ class Web
   double planBoxBorderRadius = 8.5;
 
   @override
-  double sumInnerBoxPadding = 20.0;
+  double sumInnerBoxPadding = 25.0;
 
   @override
   double paddingStepCircle = 13.0;

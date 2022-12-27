@@ -24,6 +24,11 @@ class CustomerInfoEventSelectPlan extends CustomerInfoEvent {
   List<Object?> get props => [newPlan];
 }
 
+class CustomerInfoEventSwapPlan extends CustomerInfoEvent {
+  @override
+  List<Object?> get props => [];
+}
+
 class CustomerInfoEventAddAddOn extends CustomerInfoEvent {
   final AddOn newAddOn;
 

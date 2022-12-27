@@ -10,3 +10,12 @@ abstract class CurrentStepIndexEvent extends Equatable {
 class CurrentStepIndexEventNext extends CurrentStepIndexEvent {}
 
 class CurrentStepIndexEventPrevious extends CurrentStepIndexEvent {}
+
+class CurrentStepIndexEventJump extends CurrentStepIndexEvent {
+  const CurrentStepIndexEventJump(this.newVal);
+
+  final int newVal;
+
+  @override
+  List<Object> get props => [newVal];
+}

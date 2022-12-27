@@ -5,11 +5,9 @@ class CustomerInfoState extends Equatable {
 
   const CustomerInfoState(this.customer);
 
-  CustomerInfoState changePersonalInfo(
-    String? name,
-    String? email,
-    String? phoneNumber,
-  ) {
+  CustomerInfoState changePersonalInfo(String? name,
+      String? email,
+      String? phoneNumber,) {
     Customer modifiedCustomer = customer.clone();
     modifiedCustomer.name = name;
     modifiedCustomer.email = email;
@@ -21,6 +19,20 @@ class CustomerInfoState extends Equatable {
   CustomerInfoState selectPlan(Plan newPlan) {
     Customer modifiedCustomer = customer.clone();
     modifiedCustomer.plan = newPlan;
+    return CustomerInfoState(modifiedCustomer);
+  }
+
+  CustomerInfoState swapPlan() {
+    Customer modifiedCustomer = customer.clone();
+    modifiedCustomer.plan.perMonth = !modifiedCustomer.plan.perMonth;
+
+    // Swap add ons
+    if (modifiedCustomer.addOns.isNotEmpty) {
+      for (AddOn addOn in modifiedCustomer.addOns) {
+        addOn.perMonth = !addOn.perMonth;
+      }
+    }
+
     return CustomerInfoState(modifiedCustomer);
   }
 

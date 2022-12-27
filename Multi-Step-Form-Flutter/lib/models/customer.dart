@@ -15,6 +15,16 @@ class Customer {
   Plan plan;
   List<AddOn> addOns = [];
 
+  // Computed Properties
+  double get totalCost {
+    double sum = 0;
+    for (var addOn in addOns) {
+      sum += addOn.cost;
+    }
+
+    return sum + plan.cost;
+  }
+
   Customer clone() {
     return Customer(
       name: name,
@@ -44,11 +54,29 @@ class Plan {
   PlanName name;
   bool perMonth;
 
+  String get nameString {
+    switch (name) {
+      case PlanName.arcade:
+        return "Arcade";
+      case PlanName.advanced:
+        return "Advanced";
+      case PlanName.pro:
+        return "Pro";
+    }
+  }
+
   double get cost {
     if (perMonth) {
       return AvailablePlans.costPerMonth[name]!;
     }
     return AvailablePlans.costPerYear[name]!;
+  }
+
+  String get costString {
+    if (perMonth) {
+      return "\$$cost/mo";
+    }
+    return "\$$cost/yr";
   }
 
   String get imagePath {
@@ -64,7 +92,7 @@ class Plan {
 
   @override
   String toString() {
-    return "${name.toString()} ${perMonth ? "Monthly" : "Yearly"}";
+    return "$nameString ${perMonth ? "(Monthly)" : "(Yearly)"}";
   }
 }
 
@@ -101,6 +129,13 @@ class AddOn {
       return AvailableAddOns.costPerMonth[name]!;
     }
     return AvailableAddOns.costPerYear[name]!;
+  }
+
+  String get costString {
+    if (perMonth) {
+      return "+\$$cost/mo";
+    }
+    return "+\$$cost/yr";
   }
 
   String get title {
