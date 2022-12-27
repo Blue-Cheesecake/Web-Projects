@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:multi_step_form/constants/available_add_ons.dart';
 import 'package:multi_step_form/dimensions/dimensions.dart';
+import 'package:multi_step_form/models/customer.dart';
 import 'package:multi_step_form/presentation/bloc/customer_info/customer_info_bloc.dart';
 import 'package:multi_step_form/screens/multi_steps_form/pages/add_ons/widgets/add_ons_box.dart';
 import 'package:multi_step_form/screens/multi_steps_form/shared/widgets/step_page_layout.dart';
@@ -27,13 +28,18 @@ class AddOns extends StatelessWidget {
         // Add-ons List
         BlocBuilder<CustomerInfoBloc, CustomerInfoState>(
           builder: (context, state) {
+            List<AddOn> addOnsList = AvailableAddOns.listPerYear;
+            if (state.customer.plan.perMonth) {
+              addOnsList = AvailableAddOns.listPerMonth;
+            }
+
             return Column(
-              children: AvailableAddOns.listPerMonth.map((addOn) {
-                int index = AvailableAddOns.listPerMonth.indexOf(addOn);
+              children: addOnsList.map((addOn) {
+                int index = addOnsList.indexOf(addOn);
                 bool isSelected = state.customer.addOns.contains(addOn);
                 final c = context.read<CustomerInfoBloc>();
 
-                if (index + 1 < AvailableAddOns.listPerMonth.length) {
+                if (index + 1 < addOnsList.length) {
                   return Column(
                     children: [
                       AddOnsBox(
