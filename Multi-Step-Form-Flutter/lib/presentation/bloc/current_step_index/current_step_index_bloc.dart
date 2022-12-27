@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:multi_step_form/constants/default_values.dart';
 import 'package:multi_step_form/constants/steps.dart';
 
 part 'current_step_index_event.dart';
@@ -7,7 +8,8 @@ part 'current_step_index_state.dart';
 
 class CurrentStepIndexBloc
     extends Bloc<CurrentStepIndexEvent, CurrentStepIndexState> {
-  CurrentStepIndexBloc() : super(const CurrentStepIndexState(3)) {
+  CurrentStepIndexBloc()
+      : super(const CurrentStepIndexState(DefaultValues.initialStepIndex)) {
     on<CurrentStepIndexEventNext>((event, emit) {
       // Verify before proceed to next step
       //

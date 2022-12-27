@@ -7,8 +7,7 @@ part 'customer_info_event.dart';
 part 'customer_info_state.dart';
 
 class CustomerInfoBloc extends Bloc<CustomerInfoEvent, CustomerInfoState> {
-  CustomerInfoBloc()
-      : super(CustomerInfoState(DefaultValues.fullInfoCustomer)) {
+  CustomerInfoBloc() : super(CustomerInfoState(DefaultValues.customer)) {
     on<CustomerInfoEventChangeInfo>((event, emit) {
       // The state derives the way to change value
       // The event derives the parameters

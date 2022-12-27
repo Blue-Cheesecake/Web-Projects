@@ -9,12 +9,16 @@ class InputLayout extends StatefulWidget {
     required this.placeholder,
     required this.changeInfoBLoC,
     this.initialValue,
+    this.additionalValidator,
+    this.additionalErrorText,
   }) : super(key: key);
 
   final String txtTitle;
   final String placeholder;
   final Function(String) changeInfoBLoC;
   final String? initialValue;
+  final bool Function(String)? additionalValidator;
+  final String? additionalErrorText;
 
   OutlineInputBorder _decoratedOutlineInputBorder(Color currColor) {
     return OutlineInputBorder(
@@ -49,6 +53,12 @@ class _InputLayoutState extends State<InputLayout> {
       return "This field is required";
     }
 
+    if (widget.additionalValidator != null) {
+      if (!widget.additionalValidator!(_controller.text) && !firstEnter) {
+        return widget.additionalErrorText ?? "Invalid input";
+      }
+    }
+
     return null;
   }
 
@@ -57,7 +67,6 @@ class _InputLayoutState extends State<InputLayout> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-
         /// Input Title
         ///
         Text(
@@ -87,14 +96,14 @@ class _InputLayoutState extends State<InputLayout> {
               color: Style.color.coolGray,
             ),
             focusedBorder:
-            widget._decoratedOutlineInputBorder(Style.color.purplishBlue),
+                widget._decoratedOutlineInputBorder(Style.color.purplishBlue),
             enabled: true,
             enabledBorder:
-            widget._decoratedOutlineInputBorder(Style.color.lightGray),
+                widget._decoratedOutlineInputBorder(Style.color.lightGray),
             focusedErrorBorder:
-            widget._decoratedOutlineInputBorder(Style.color.strawberryRed),
+                widget._decoratedOutlineInputBorder(Style.color.strawberryRed),
             errorBorder:
-            widget._decoratedOutlineInputBorder(Style.color.strawberryRed),
+                widget._decoratedOutlineInputBorder(Style.color.strawberryRed),
             errorText: _errorText,
           ),
         )

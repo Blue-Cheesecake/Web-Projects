@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:multi_step_form/presentation/bloc/customer_info/customer_info_bloc.dart';
 import 'package:multi_step_form/screens/multi_steps_form/pages/personal_info/shared/input_layout.dart';
+import 'package:multi_step_form/utils/utilities.dart';
 
 class PhoneInputBox extends StatelessWidget {
   const PhoneInputBox({Key? key}) : super(key: key);
@@ -26,6 +27,8 @@ class PhoneInputBox extends StatelessWidget {
               print(exception.toString());
             }
           },
+          additionalValidator: Utilities.isValidPhoneNumber,
+          additionalErrorText: "This might not be a valid phone number",
         );
       },
     );
