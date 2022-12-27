@@ -29,5 +29,6 @@ class FontSize {
   final double paragraph = 14.0;
   final double sidebarSpacing = 1.5;
   final double subtitleSpacing = 0.5;
+  final double largeParagraph = 15.0;
   final double smallParagraph = 12.5;
 }

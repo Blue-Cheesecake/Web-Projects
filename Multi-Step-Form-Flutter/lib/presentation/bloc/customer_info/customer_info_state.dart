@@ -26,19 +26,18 @@ class CustomerInfoState extends Equatable {
 
   CustomerInfoState addNewAddOn(AddOn newAddOn) {
     Customer modifiedCustomer = customer.clone();
-    modifiedCustomer.addOns ??= [];
-    modifiedCustomer.addOns!.add(newAddOn);
+    modifiedCustomer.addOns.add(newAddOn);
     return CustomerInfoState(modifiedCustomer);
   }
 
   CustomerInfoState removeAddOn(AddOn addOn) {
     Customer modifiedCustomer = customer.clone();
-    if (modifiedCustomer.addOns == null || modifiedCustomer.addOns!.isEmpty) {
+    if (modifiedCustomer.addOns.isEmpty) {
       throw Exception(
         "(BLoC: CustomerInfoState -> removeAddOn) Cannot remove addon while the list is empty or null",
       );
     }
-    modifiedCustomer.addOns?.remove(addOn);
+    modifiedCustomer.addOns.remove(addOn);
     return CustomerInfoState(modifiedCustomer);
   }
 

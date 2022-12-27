@@ -7,5 +7,6 @@ class DefaultValues {
       PlanName.arcade,
       true,
     ),
+    addOns: [],
   );
 }

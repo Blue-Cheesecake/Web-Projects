@@ -50,7 +50,10 @@ class Web
   double sideBarWidth = 250.0;
 
   @override
-  double addonsBoxHeight = 30.0;
+  double addonsBoxHeight = 80.0;
+
+  @override
+  double addonsCheckBoxSquare = 20.0;
 
   @override
   double planBoxHeight = 35.0;
@@ -99,4 +102,10 @@ class Web
 
   @override
   double inputWidth = 1.3;
+
+  @override
+  double addOnsBoxPadding = 20.0;
+
+  @override
+  double addOnsBoxSpacingTitle = 4;
 }

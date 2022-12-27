@@ -1,19 +1,18 @@
+import 'package:multi_step_form/constants/available_add_ons.dart';
 import 'package:multi_step_form/constants/available_plans.dart';
 
 class Customer {
-  Customer({
-    this.name,
+  Customer({this.name,
     this.email,
     this.phoneNumber,
     required this.plan,
-    this.addOns,
-  });
+    required this.addOns});
 
   String? name;
   String? email;
   int? phoneNumber;
   Plan plan;
-  List<AddOn>? addOns = [];
+  List<AddOn> addOns = [];
 
   Customer clone() {
     return Customer(
@@ -74,10 +73,65 @@ enum PlanName {
 
 class AddOn {
   AddOn(this.name,
-      this.cost,);
+      this.perMonth,);
 
   AddOnName name;
-  double cost;
+  bool perMonth;
+
+  String get subtitle {
+    if (name == AddOnName.onlineService) {
+      return "Access to Multiplayer games";
+    }
+    if (name == AddOnName.largerStorage) {
+      return "Extra 1TB of cloud save";
+    }
+    if (name == AddOnName.customizableProfile) {
+      return "Custom theme on your profile";
+    }
+    return "Subtitle is not available";
+  }
+
+  double get cost {
+    if (perMonth) {
+      return AvailableAddOns.costPerMonth[name]!;
+    }
+    return AvailableAddOns.costPerYear[name]!;
+  }
+
+  String get title {
+    if (name == AddOnName.onlineService) {
+      return "Online service";
+    }
+    if (name == AddOnName.largerStorage) {
+      return "Larger storage";
+    }
+    if (name == AddOnName.customizableProfile) {
+      return "Customizable profile";
+    }
+    return "Not available";
+  }
+
+  @override
+  bool operator ==(Object other) {
+    AddOn castedOther = other as AddOn;
+    return name.name == castedOther.name.name;
+  }
+
+  @override
+  int get hashCode {
+    return name.name.hashCode + perMonth.hashCode;
+  }
+
+  @override
+  String toString() {
+    var result = "$title ";
+    if (perMonth) {
+      result += "Monthly";
+    } else {
+      result += "Yearly";
+    }
+    return result;
+  }
 }
 
 enum AddOnName {

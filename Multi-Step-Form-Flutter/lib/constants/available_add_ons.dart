@@ -14,4 +14,18 @@ class AvailableAddOns {
     AddOnName.largerStorage: 20.0,
     AddOnName.customizableProfile: 20.0,
   };
+
+  static final List<AddOn> listPerMonth = [
+    AddOn(AddOnName.onlineService, true),
+    AddOn(AddOnName.largerStorage, true),
+    AddOn(AddOnName.customizableProfile, true),
+  ];
+
+  static final List<AddOn> listPerYear = [
+    AddOn(AddOnName.onlineService, false),
+    AddOn(AddOnName.largerStorage, false),
+    AddOn(AddOnName.customizableProfile, false),
+  ];
+  
+
 }
