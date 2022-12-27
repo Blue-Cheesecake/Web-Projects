@@ -30,6 +30,9 @@ class Summary extends StatelessWidget {
           ),
           decoration: BoxDecoration(
             color: Style.color.alabaster,
+            borderRadius: BorderRadius.all(
+              Radius.circular(Dimensions.web.planBoxBorderRadius),
+            ),
           ),
           child: Column(
             children: [

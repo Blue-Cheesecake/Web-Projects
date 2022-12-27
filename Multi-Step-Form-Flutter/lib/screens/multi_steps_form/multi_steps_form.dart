@@ -45,7 +45,8 @@ class _MultiStepsFormState extends State<MultiStepsForm> {
       },
     );
   }
-
+  
+  // TODO: implement mobile layout
   Widget _mobileLayout() {
     return Container();
   }
@@ -68,6 +69,9 @@ class _MultiStepsFormState extends State<MultiStepsForm> {
             height: Dimensions.web.cardHeight,
             padding: EdgeInsets.all(Dimensions.web.paddingAround),
             decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(
+                Radius.circular(Dimensions.web.planBoxBorderRadius),
+              ),
               color: Style.color.white,
             ),
             child: layout,
