@@ -17,7 +17,7 @@ class PhoneInputBox extends StatelessWidget {
           changeInfoBLoC: (val) {
             // remove all space in string
             try {
-              int phoneNumber = int.parse(val.replaceAll(" ", ""));
+              String phoneNumber = val.replaceAll(" ", "");
               context
                   .read<CustomerInfoBloc>()
                   .add(CustomerInfoEventChangeInfo(phoneNumber: phoneNumber));

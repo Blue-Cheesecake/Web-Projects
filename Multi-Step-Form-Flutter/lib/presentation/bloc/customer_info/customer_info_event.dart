@@ -7,7 +7,7 @@ abstract class CustomerInfoEvent extends Equatable {
 class CustomerInfoEventChangeInfo extends CustomerInfoEvent {
   final String? name;
   final String? email;
-  final int? phoneNumber;
+  final String? phoneNumber;
 
   const CustomerInfoEventChangeInfo({this.name, this.email, this.phoneNumber});
 

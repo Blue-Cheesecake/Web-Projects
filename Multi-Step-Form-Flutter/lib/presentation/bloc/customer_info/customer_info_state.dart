@@ -8,7 +8,7 @@ class CustomerInfoState extends Equatable {
   CustomerInfoState changePersonalInfo(
     String? name,
     String? email,
-    int? phoneNumber,
+    String? phoneNumber,
   ) {
     Customer modifiedCustomer = customer.clone();
     modifiedCustomer.name = name;

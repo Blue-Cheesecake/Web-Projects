@@ -2,15 +2,16 @@ import 'package:multi_step_form/constants/available_add_ons.dart';
 import 'package:multi_step_form/constants/available_plans.dart';
 
 class Customer {
-  Customer({this.name,
-    this.email,
-    this.phoneNumber,
-    required this.plan,
-    required this.addOns});
+  Customer(
+      {this.name,
+      this.email,
+      this.phoneNumber,
+      required this.plan,
+      required this.addOns});
 
   String? name;
   String? email;
-  int? phoneNumber;
+  String? phoneNumber;
   Plan plan;
   List<AddOn> addOns = [];
 
@@ -35,8 +36,10 @@ class Customer {
 }
 
 class Plan {
-  Plan(this.name,
-      this.perMonth,);
+  Plan(
+    this.name,
+    this.perMonth,
+  );
 
   PlanName name;
   bool perMonth;
@@ -72,8 +75,10 @@ enum PlanName {
 }
 
 class AddOn {
-  AddOn(this.name,
-      this.perMonth,);
+  AddOn(
+    this.name,
+    this.perMonth,
+  );
 
   AddOnName name;
   bool perMonth;
