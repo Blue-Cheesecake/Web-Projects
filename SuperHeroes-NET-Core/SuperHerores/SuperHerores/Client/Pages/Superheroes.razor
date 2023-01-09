@@ -1,0 +1,38 @@
+﻿@page "/superheroes"
+@using SuperHerores.Shared
+@inject ISuperheroService SuperheroService
+@inject HttpClient http
+
+<h3>Superheroes</h3>
+
+<table class="table table-sm">
+
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Superhero Name</th>
+            <th>Comic</th>
+        </tr>
+    </thead>
+
+    @foreach (var hero in SuperheroService.Heroes)
+    {
+        <tr>
+            <td>@hero.FirstName</td>
+            <td>@hero.LastName</td>
+            <td>@hero.HeroName</td>
+            <td>@hero.Comic?.Name</td>
+        </tr>
+    }
+
+</table>
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        await SuperheroService.GetSuperhero();
+    }
+}
+
