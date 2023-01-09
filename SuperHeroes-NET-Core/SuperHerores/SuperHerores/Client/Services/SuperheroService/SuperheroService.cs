@@ -17,14 +17,24 @@ namespace SuperHerores.Client.Services.SuperheroService
         public List<Superhero> Heroes { get; set; } = new List<Superhero>();
         public List<Comic> Comics { get; set; } = new List<Comic>();
 
-        public Task GetComics()
+        public async Task GetComics()
         {
-            throw new NotImplementedException();
+            var result = await _Http.GetFromJsonAsync<List<Comic>>("api/superhero/comics");
+            if (result == null)
+            {
+                throw new Exception("No Comics");
+            }
+            Comics = result;
         }
 
-        public Task<Superhero> GetSingleSuperhero(int id)
+        public async Task<Superhero> GetSingleSuperhero(int id)
         {
-            throw new NotImplementedException();
+            var result = await _Http.GetFromJsonAsync<Superhero>($"api/superhero/{id}");
+            if (result == null)
+            {
+                throw new Exception("Hero is not found");
+            }
+            return result;
         }
 
         public async Task GetSuperhero()

@@ -13,18 +13,18 @@ namespace SuperHerores.Server.Controllers
     [ApiController]
     public class SuperheroController : ControllerBase
     {
-        public static List<Comic> comics = new List<Comic> {
+        private static List<Comic> _Comics = new List<Comic> {
             new Comic { Id=1, Name="Marvel"},
             new Comic { Id=2, Name="DC"},
         };
 
-        public static List<Superhero> heroes = new List<Superhero> {
+        private static List<Superhero> _Heroes = new List<Superhero> {
             new Superhero {
                 Id=1,
                 FirstName="Peter",
                 LastName="Parker",
                 HeroName="Spiderman",
-                Comic=comics[0],
+                Comic=_Comics[0],
                 ComicId=1,
             },
             new Superhero {
@@ -32,7 +32,7 @@ namespace SuperHerores.Server.Controllers
                 FirstName="Bruce",
                 LastName="Wayne",
                 HeroName="Batman",
-                Comic=comics[1],
+                Comic=_Comics[1],
                 ComicId=2,
             },
         };
@@ -40,14 +40,20 @@ namespace SuperHerores.Server.Controllers
         [HttpGet]
         public async Task<IActionResult> GetSuperheroesList()
         {
-            return Ok(heroes);
+            return Ok(_Heroes);
+        }
+
+        [HttpGet("comics")]
+        public async Task<IActionResult> GetComics()
+        {
+            return Ok(_Comics);
         }
 
         // or HTTPGet Route("{id}")
         [HttpGet("{id}")]
         public async Task<IActionResult> GetSingleSuperhero(int id)
         {
-            Superhero? result = heroes.Find(hero => hero.Id == id);
+            Superhero? result = _Heroes.Find(hero => hero.Id == id);
             if (result == null)
             {
                 return NotFound("Sorry, no hero is found.");

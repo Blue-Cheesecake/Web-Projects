@@ -1,7 +1,7 @@
 ﻿@page "/superheroes"
 @using SuperHerores.Shared
 @inject ISuperheroService SuperheroService
-@inject HttpClient http
+@inject NavigationManager NavigationManager
 
 <h3>Superheroes</h3>
 
@@ -13,6 +13,7 @@
             <th>Last Name</th>
             <th>Superhero Name</th>
             <th>Comic</th>
+            <th>Actions</th>
         </tr>
     </thead>
 
@@ -23,6 +24,7 @@
             <td>@hero.LastName</td>
             <td>@hero.HeroName</td>
             <td>@hero.Comic?.Name</td>
+            <td><button class="btn" @onclick="() => { ShowHero(hero.Id); }"><i class="oi oi-pencil"></i></button></td>
         </tr>
     }
 
@@ -33,6 +35,11 @@
     protected override async Task OnInitializedAsync()
     {
         await SuperheroService.GetSuperhero();
+    }
+
+    internal void ShowHero(int id)
+    {
+        NavigationManager.NavigateTo($"/hero/{id}");
     }
 }
 
