@@ -4,6 +4,7 @@ namespace SuperHerores.Server.Data
     public class DataContext : DbContext
     {
 
+        // public DbSet<Model> NameTable { get; set; }
         public DbSet<Superhero> Superheroes { get; set; }
         public DbSet<Comic> Comics { get; set; }
 
