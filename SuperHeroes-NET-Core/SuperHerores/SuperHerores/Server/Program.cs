@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.ResponseCompression;
+﻿global using SuperHerores.Shared;
+global using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.ResponseCompression;
 
 var builder = WebApplication.CreateBuilder(args);
 
