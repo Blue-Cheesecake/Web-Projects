@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using BlazorSampleAuthentication.Shared;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BlazorSampleAuthentication.Server.Controllers;
 
@@ -19,7 +20,7 @@ public class WeatherForecastController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet]
+    [HttpGet, Authorize(Roles = "Admin")]
     public IEnumerable<WeatherForecast> Get()
     {
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast

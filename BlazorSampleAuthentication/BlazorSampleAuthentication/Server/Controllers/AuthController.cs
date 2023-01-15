@@ -49,7 +49,8 @@ namespace BlazorSampleAuthentication.Server.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<string>> Login(UserDto request)
         {
-            // Check if the username is in db. Search of them.
+            // Check if the username is in db. Search of them in order to 
+            // replace the User 
 
             // If the username is not found
             if (User.Username != request.Username)
@@ -63,7 +64,9 @@ namespace BlazorSampleAuthentication.Server.Controllers
                 return BadRequest("Wrong password");
             }
 
-            string token = CreateToken(User);
+            // NOTE: Identify the role for User before assing the Role parameter.
+            // This example will always assign th Admin role.
+            string token = CreateToken(User, Role.Admin);
             return Ok(token);
         }
 
@@ -86,13 +89,15 @@ namespace BlazorSampleAuthentication.Server.Controllers
                 return computeHash.SequenceEqual(passwordHash);
             }
         }
-
+         
         // Utility Method. Generating JWT
-        private string CreateToken(User user)
+        private string CreateToken(User user, Role role)
         {
             // Create Claims
+            // NOTE: Editable => Add new Claim
             List<Claim> claims = new List<Claim> {
                 new Claim(ClaimTypes.Name, User.Username),
+                new Claim(ClaimTypes.Role, role.ToString()),
             };
 
             // Create Key
@@ -102,6 +107,7 @@ namespace BlazorSampleAuthentication.Server.Controllers
             var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
 
             // Create token
+            // NOTE: Editable => expiration date.
             var token = new JwtSecurityToken(
                 claims: claims,
                 expires: DateTime.Now.AddDays(1),
