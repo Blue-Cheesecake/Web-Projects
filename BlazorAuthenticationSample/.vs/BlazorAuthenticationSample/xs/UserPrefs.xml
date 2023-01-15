@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{26017C3C-636F-40F2-B293-4A7F4C68F0B0}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.BlazorAuthenticationSample.Server PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlazorAuthenticationSample/Client/CustomAuthStateProvider.cs">
+    <Files>
+      <File FileName="BlazorAuthenticationSample/Server/Program.cs" Line="12" Column="40" />
+      <File FileName="BlazorAuthenticationSample/Client/_Imports.razor" Line="11" Column="1" />
+      <File FileName="BlazorAuthenticationSample/Client/CustomAuthStateProvider.cs" Line="11" Column="88" />
+      <File FileName="BlazorAuthenticationSample/Client/Pages/Counter.razor" Line="7" Column="1" />
+      <File FileName="BlazorAuthenticationSample/Client/App.razor" Line="12" Column="28" />
+      <File FileName="BlazorAuthenticationSample/Client/Program.cs" Line="5" Column="1" />
+      <File FileName="BlazorAuthenticationSample/Client/Pages/FetchData.razor" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BlazorAuthenticationSample" expanded="True">
+            <Node name="BlazorAuthenticationSample.Client" expanded="True">
+              <Node name="Pages" expanded="True" />
+              <Node name="Shared" expanded="True" />
+              <Node name="CustomAuthStateProvider.cs" selected="True" />
+            </Node>
+            <Node name="BlazorAuthenticationSample.Server" expanded="True" />
+            <Node name="BlazorAuthenticationSample.Shared" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
