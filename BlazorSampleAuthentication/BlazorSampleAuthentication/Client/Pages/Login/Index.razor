@@ -28,6 +28,8 @@
     private async Task HandleLogin()
     {
         Console.WriteLine($"Client: {_userDto.Username} {_userDto.Password}");
+
+        // We should refactor this into Service.
         HttpResponseMessage result = await Http.PostAsJsonAsync("/api/auth/login", _userDto);
 
         // NOTE: Use ReadAsStringAsync method because we're sure that the API will return only string as a token
@@ -37,6 +39,7 @@
 
         // Save to local storage
         await LocalStorage.SetItemAsync("token", token);
+        await AuthStateProvider.GetAuthenticationStateAsync();
 
         return;
     }

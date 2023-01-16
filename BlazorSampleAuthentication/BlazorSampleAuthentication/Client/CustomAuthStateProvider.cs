@@ -6,16 +6,29 @@ namespace BlazorSampleAuthentication.Client
 {
     public class CustomAuthStateProvider : AuthenticationStateProvider
     {
+
+        private readonly ILocalStorageService _localStorage;
+
+        public CustomAuthStateProvider(ILocalStorageService localStorageService)
+        {
+            _localStorage = localStorageService;
+        }
+
         public override async Task<AuthenticationState> GetAuthenticationStateAsync()
         {
-            string token = "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVG9ueSBTdGFyayIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Iklyb24gTWFuIiwiZXhwIjozMTY4NTQwMDAwfQ.IbVQa1lNYYOzwso69xYfsMOHnQfO3VLvVqV2SOXS7sTtyyZ8DEf5jmmwz2FGLJJvZnQKZuieHnmHkg7CGkDbvA";
+            string token = await _localStorage.GetItemAsStringAsync("token");
 
 
             // If this is empty, it means user is not authorized.
-            //var identity = new ClaimsIdentity();
+            // The default will be empty
+            var identity = new ClaimsIdentity();
 
-            // Authorized will look like this
-            var identity = new ClaimsIdentity(ParseClaimsFromJwt(token), "jwt");
+            // If the client has token, he/she is authorized.
+            if (!string.IsNullOrEmpty(token))
+            {
+                // Authorized will look like this
+                identity = new ClaimsIdentity(ParseClaimsFromJwt(token), "jwt");
+            }
 
             var user = new ClaimsPrincipal(identity);
             var state = new AuthenticationState(user);
