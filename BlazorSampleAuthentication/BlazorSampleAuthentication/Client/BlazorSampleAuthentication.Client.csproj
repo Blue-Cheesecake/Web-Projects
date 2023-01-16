@@ -13,6 +13,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.12" PrivateAssets="all" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.13" />
+    <PackageReference Include="Blazored.LocalStorage" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,5 +22,10 @@
 
   <ItemGroup>
     <None Remove="Microsoft.AspNetCore.Components.Authorization" />
+    <None Remove="Pages\Login\" />
+    <None Remove="Blazored.LocalStorage" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\Login\" />
   </ItemGroup>
 </Project>

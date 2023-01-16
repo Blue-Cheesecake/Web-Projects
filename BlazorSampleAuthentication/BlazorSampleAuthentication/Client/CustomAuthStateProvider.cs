@@ -26,7 +26,9 @@ namespace BlazorSampleAuthentication.Client
             return state;
         }
 
-        public static IEnumerable<Claim> ParseClaimsFromJwt(string jwt)
+        // Utility method
+        // Copy from: https://github.com/patrickgod/BlazorAuthenticationTutorial/blob/master/BlazorAuthenticationTutorial/Client/CustomAuthStateProvider.cs
+        private static IEnumerable<Claim> ParseClaimsFromJwt(string jwt)
         {
             var payload = jwt.Split('.')[1];
             var jsonBytes = ParseBase64WithoutPadding(payload);
@@ -34,6 +36,8 @@ namespace BlazorSampleAuthentication.Client
             return keyValuePairs.Select(kvp => new Claim(kvp.Key, kvp.Value.ToString()));
         }
 
+
+        // Utility method
         private static byte[] ParseBase64WithoutPadding(string base64)
         {
             switch (base64.Length % 4)

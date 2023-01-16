@@ -1,0 +1,45 @@
+﻿@page "/login"
+@inject HttpClient Http
+@inject AuthenticationStateProvider AuthStateProvider
+@inject ILocalStorageService LocalStorage
+
+<h3>Login</h3>
+
+<EditForm Model="_userDto" OnSubmit="HandleLogin">
+    <div>
+        <label for="username"> Username </label>
+        <InputText id="username " @bind-Value="_userDto.Username"/>
+    </div>
+    <br />
+    <div>
+        <label for="password"> Password </label>
+        <InputText id="password" @bind-Value="_userDto.Password"/>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Login</button>
+    
+</EditForm>
+
+
+@code {
+
+    private UserDto _userDto = new UserDto();
+
+    private async Task HandleLogin()
+    {
+        Console.WriteLine($"Client: {_userDto.Username} {_userDto.Password}");
+        HttpResponseMessage result = await Http.PostAsJsonAsync("/api/auth/login", _userDto);
+
+        // NOTE: Use ReadAsStringAsync method because we're sure that the API will return only string as a token
+        // But if API return complex json, use ReadFromJsonAsync
+        string token = await result.Content.ReadAsStringAsync();
+        Console.WriteLine(token);
+
+        // Save to local storage
+        await LocalStorage.SetItemAsync("token", token);
+
+        return;
+    }
+
+}
+
