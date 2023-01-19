@@ -49,23 +49,28 @@ namespace BlazorSampleAuthentication.Server.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<string>> Login(UserDto request)
         {
-            // Check if the username is in db. Search of them in order to 
-            // replace the User 
+            Console.WriteLine($"Login API: {request.Username} {request.Password}");
+            // Check if the request username is in db. Search of them in order to 
+            // replace the User
+            // Searching ...
+            // Assume
+
 
             // If the username is not found
-            if (User.Username != request.Username)
-            {
-                return BadRequest("Sorry, there's no user here");
-            }
+            //if (User.Username != request.Username)
+            //{
+            //    return BadRequest("Sorry, there's no user here");
+            //}
 
             // Verify the password
-            if (!VerifyPasswordHash(request.Password, User.PasswordHash, User.PasswordSalt))
-            {
-                return BadRequest("Wrong password");
-            }
+            //if (!VerifyPasswordHash(request.Password, User.PasswordHash, User.PasswordSalt))
+            //{
+            //    return BadRequest("Wrong password");
+            //}
 
             // NOTE: Identify the role for User before assing the Role parameter.
             // This example will always assign th Admin role.
+            User.Username = request.Username;
             string token = CreateToken(User, Role.Admin);
             return Ok(token);
         }
@@ -96,7 +101,7 @@ namespace BlazorSampleAuthentication.Server.Controllers
             // Create Claims
             // NOTE: Editable => Add new Claim
             List<Claim> claims = new List<Claim> {
-                new Claim(ClaimTypes.Name, User.Username),
+                new Claim(ClaimTypes.Name, user.Username),
                 new Claim(ClaimTypes.Role, role.ToString()),
             };
 
