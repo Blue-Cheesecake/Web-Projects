@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security.Claims;
 using System.Text.Json;
+using System.Net.Http.Headers;
 
 namespace BlazorSampleAuthentication.Client
 {
@@ -8,10 +9,12 @@ namespace BlazorSampleAuthentication.Client
     {
 
         private readonly ILocalStorageService _localStorage;
+        private readonly HttpClient _http;
 
-        public CustomAuthStateProvider(ILocalStorageService localStorageService)
+        public CustomAuthStateProvider(ILocalStorageService localStorageService, HttpClient http)
         {
             _localStorage = localStorageService;
+            this._http = http;
         }
 
         public override async Task<AuthenticationState> GetAuthenticationStateAsync()
@@ -22,12 +25,14 @@ namespace BlazorSampleAuthentication.Client
             // If this is empty, it means user is not authorized.
             // The default will be empty
             var identity = new ClaimsIdentity();
+            _http.DefaultRequestHeaders.Authorization = null;
 
             // If the client has token, he/she is authorized.
             if (!string.IsNullOrEmpty(token))
             {
                 // Authorized will look like this
                 identity = new ClaimsIdentity(ParseClaimsFromJwt(token), "jwt");
+                _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token.Replace("\"", ""));
             }
 
             var user = new ClaimsPrincipal(identity);
