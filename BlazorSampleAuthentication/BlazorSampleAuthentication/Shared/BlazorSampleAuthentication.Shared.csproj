@@ -9,4 +9,7 @@
   <ItemGroup>
     <SupportedPlatform Include="browser" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="QRCoder" />
+  </ItemGroup>
 </Project>

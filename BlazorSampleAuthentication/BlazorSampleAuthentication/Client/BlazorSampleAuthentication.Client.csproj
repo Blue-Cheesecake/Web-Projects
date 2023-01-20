@@ -14,6 +14,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.12" PrivateAssets="all" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.13" />
     <PackageReference Include="Blazored.LocalStorage" Version="4.3.0" />
+    <PackageReference Include="QRCoder" Version="1.4.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,8 +25,11 @@
     <None Remove="Microsoft.AspNetCore.Components.Authorization" />
     <None Remove="Pages\Login\" />
     <None Remove="Blazored.LocalStorage" />
+    <None Remove="QRCoder" />
+    <None Remove="Pages\DynamicQRcode\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\Login\" />
+    <Folder Include="Pages\DynamicQRcode\" />
   </ItemGroup>
 </Project>
