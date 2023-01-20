@@ -1,15 +1,55 @@
 ﻿@page "/dynamicqrcode"
 @inject HttpClient Http
 
+<h3>Dynamic QRCode</h3>
 
-<h3>Component1</h3>
+<div class="container">
+
+    <div>
+        <label for="qrcodetext"> Enter QRCode Text </label>
+        <input type="url" class="form-control" id="qrcodetext" @bind-value="_currentURL" />
+    </div>
+
+    <br />
+
+    <button @onclick="GenerateQR" class="btn btn-primary">Generate QR Code</button>
+
+    <div class="form-group">
+        @if (!string.IsNullOrEmpty(_generatedQRCodeUrl.Trim()))
+        {
+            <img src="@_generatedQRCodeUrl" class="img-thumbnail" />
+        }
+
+       
+        <br />
+
+        <button @onclick="ClearQRCode" class="btn btn-secondary">Clear</button>
+    </div>
+
+</div>
+
 
 @code {
 
-    protected override Task OnInitializedAsync()
+    private string _currentURL = string.Empty;
+    private string _generatedQRCodeUrl = string.Empty;
+
+    private void ClearQRCode()
     {
-        return base.OnInitializedAsync();
+        _generatedQRCodeUrl = string.Empty;
     }
 
+    private async void GenerateQR()
+    {
+        var qrModel = new QRCodeModel { QRCodeText = _currentURL };
+        HttpResponseMessage result = await Http.PostAsJsonAsync("api/GeneratingQRCode", qrModel);
+
+        if (result.IsSuccessStatusCode)
+        {
+            _generatedQRCodeUrl = await result.Content.ReadAsStringAsync();
+            Console.WriteLine($"Generated: {_generatedQRCodeUrl}");
+        }
+
+    }
 }
 
